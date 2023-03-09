@@ -148,10 +148,10 @@ Model ecommerce_demo_pointmap_airbnb {
     definition: @sql {{ #SOURCE.neighbourhood }};;
   }
   dimension neighbourhood_cleansed {
-    label: 'Neighbourhood Cleansed'
-    type: 'number'
-    hidden: false
+    label: "Neighbourhood Cleansed"
+    type: "number"
     definition: @sql {{ #SOURCE.neighbourhood_cleansed }};;
+    description: "Completed cleaning"
   }
   dimension property_type {
     label: 'Property Type'
