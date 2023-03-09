@@ -4,10 +4,10 @@ Model ecommerce_ga_users {
   description: ''
   data_source_name: 'demodb'
   dimension date {
-    label: 'Date'
-    type: 'date'
-    hidden: false
+    label: "Date"
+    type: "date"
     definition: @sql {{ #SOURCE.date }};;
+    description: "Time date etc"
   }
   dimension users_count {
     label: 'Users Count'
