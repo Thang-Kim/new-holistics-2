@@ -63,7 +63,7 @@ Model ecommerce_inbound_trials_holistics_csv {
     hidden: false
     definition: @sql {{ #SOURCE.how_you_know }};;
   }
-
+<<<<<
   owner: 'my.nguyen@holistics.io'
   table_name: '"ecommerce"."inbound_trials_holistics_csv"'
 }
