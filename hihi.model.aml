@@ -29,6 +29,5 @@ Model ecommerce_customer_services {
   }
 
   owner: 'my.nguyen@holistics.io'
-  <<<<<<<<
   table_name: '"ecommerce"."customer_services"'
 }
