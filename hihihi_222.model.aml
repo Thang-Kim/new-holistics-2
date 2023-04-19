@@ -1,4 +1,4 @@
-Model ecommerce_customer_services {
+Model ecommerce_customer_services1 {
   type: 'table'
   label: 'Customer Services'
   description: ''
