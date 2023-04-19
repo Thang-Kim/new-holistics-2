@@ -1,4 +1,4 @@
-Model ecommerce_customer_services2 {
+Model ecommerce_customer_services {
   type: 'table'
   label: 'Customer Services'
   description: ''
@@ -27,6 +27,7 @@ Model ecommerce_customer_services2 {
     definition: @sql {{ #SOURCE.completed_at }};;
     description: "Time completed a ticket"
   }
+<<<<<<<<
   owner: 'my.nguyen@holistics.io'
   table_name: '"ecommerce"."customer_services"'
 }
