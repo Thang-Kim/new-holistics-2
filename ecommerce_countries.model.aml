@@ -1,6 +1,6 @@
 Model ecommerce_countries {
   type: 'table'
-  label: 'Countries'
+  label: 'Countries???'
   description: ''
   data_source_name: 'demodb'
   dimension code {
