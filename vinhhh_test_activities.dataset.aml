@@ -1,0 +1,11 @@
+Dataset vinhhh_test_activities {
+  label: 'Vinhhh Test Activities'
+  description: ''
+  data_source_name: 'staging9'
+  models: [
+    public_activities
+  ]
+  relationships: [
+  ]
+  owner: 'vinh.hh@holistics.io'
+}
