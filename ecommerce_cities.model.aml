@@ -2,7 +2,7 @@ Model ecommerce_cities {
   type: 'table'
   label: 'Cities'
   description: ''
-  data_source_name: 'demo_postgres_2'
+  data_source_name: 'staging9'
   dimension id {
     label: 'Id'
     type: 'number'
