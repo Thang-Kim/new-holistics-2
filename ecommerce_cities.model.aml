@@ -2,7 +2,7 @@ Model ecommerce_cities {
   type: 'table'
   label: 'Cities'
   description: ''
-  data_source_name: 'khanh_sqlserver'
+  data_source_name: 'demo_postgres_2'
   dimension id {
     label: 'Id'
     type: 'number'
