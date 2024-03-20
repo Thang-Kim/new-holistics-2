@@ -1,21 +1,9 @@
 Dashboard new_dashboard {
   title: 'New Dashboard'
   description: ''''''
-
-  block filter_block: FilterBlock {
-    label: 'This is a Filter Block'
-    type: 'text'
-    default {
-      operator: 'is'
-      value: 'default'
-    }
-  }
   view: CanvasLayout {
     label: 'View 1'
     height: 800
-    block filter_block {
-      position: pos(40, 460, 400, 80)
-    }
   }
 
 }
