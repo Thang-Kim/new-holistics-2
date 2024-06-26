@@ -21,7 +21,7 @@ Model ecommerce_ga_users {
     hidden: false
     definition: @sql {{ #SOURCE.new_users_count }};;
   }
-asdasd
+
   owner: 'my.nguyen@holistics.io'
   table_name: '"ecommerce"."ga_users"'
   measure aaa {
