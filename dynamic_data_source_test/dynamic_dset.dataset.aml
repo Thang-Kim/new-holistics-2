@@ -3,19 +3,15 @@ Dataset d_cities {
   description: ''
   data_source_name: dynamic_data_source
   models: [
-    quicksell_cities
-    ,
-    quick_sell_cities_derived
+    ecommerce_cities
   ]
-  relationships: [
-    relationship(quick_sell_cities_derived.id > quicksell_cities.id, true)
-  ]
+  relationships: []
   owner: 'admin@domain.com'
   metric asdasd {
     label: "Asdasd"
     type: "number"
     hidden: false
     description: ""
-    definition: @aql count(quicksell_cities.id);;
+    definition: @aql count(ecommerce_cities.id);;
   }
 }
