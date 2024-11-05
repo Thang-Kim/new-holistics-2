@@ -9,7 +9,7 @@ Model ecommerce_categories {
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
   }
-  dimension name {
+  dimension name2 {
     label: 'Name'
     type: 'text'
     hidden: false
