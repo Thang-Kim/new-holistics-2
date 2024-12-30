@@ -14,4 +14,6 @@ Dataset d_cities {
     description: ""
     definition: @aql count(ecommerce_cities.id);;
   }
+
+  ;;
 }
