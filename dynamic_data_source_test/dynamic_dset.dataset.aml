@@ -15,5 +15,10 @@ Dataset d_cities {
     definition: @aql count(ecommerce_cities.id);;
   }
 
-  ;;
+  always_filter {
+    filter1: {
+      definition: @aql model.name is H.current_user.city ;;
+      enabled: true
+    }
+  }
 }
