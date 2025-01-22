@@ -87,7 +87,7 @@ Dashboard dashboard {
       position: pos(20, 20, 620, 420)
     }
     block v2 {
-      position: pos(50, 500, 650, 320)
+      position: pos(20, 450, 650, 320)
     }
     mobile {
       mode: 'manual'
