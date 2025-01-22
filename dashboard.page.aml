@@ -96,5 +96,4 @@ Dashboard dashboard {
       block v2
     }
   }
-  theme: H.themes.classic
 }
