@@ -90,7 +90,9 @@ Dashboard dashboard {
       position: pos(50, 500, 650, 320)
     }
     mobile {
-      mode: 'auto'
+      mode: 'manual'
+      block v1
+      block filter_block
     }
   }
 }
