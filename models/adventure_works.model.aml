@@ -2,7 +2,7 @@ Model person_address {
   type: 'table'
   label: 'Address'
   description: ''
-  data_source_name: ''
+  data_source_name: 'demodb'
   dimension address_id {
     label: 'Address Id'
     type: 'number'
