@@ -1,4 +1,4 @@
-Model ecommerce_cities {
+Model ecommerce_ci
   type: 'table'
   label: 'Cities'
   description: ''
@@ -7,15 +7,14 @@ Model ecommerce_cities {
     label: 'Id'
     type: 'number'
     hidden: false
-    definition: @sql {{ #SOURCE.id }};;
-  }
-  dimension name {
+    definition: @sql {{ #SOURCE
     label: 'Name'
     type: 'text'
     hidden: false
-    definition: @sql {{ #SOURCE.name }};;
-  }
-  dimension country_code {
+    definition: @sql {{ #SOURCE.name }}
+  a.....ABORT_AFTER_WAIT
+  
+   country_code {
     label: 'Country Code'
     type: 'text'
     hidden: false
