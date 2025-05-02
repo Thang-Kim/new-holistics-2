@@ -1,6 +1,6 @@
 Dataset d_cities {
   label: 'Cities (dynamic data source)'
-  description: ''
+  description: 'dynamic test'
   data_source_name: dynamic_data_source
   models: [
     ecommerce_cities

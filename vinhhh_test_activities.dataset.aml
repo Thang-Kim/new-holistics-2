@@ -1,6 +1,6 @@
 Dataset vinhhh_test_activities {
   label: 'Vinhhh Test Activities'
-  description: ''
+  description: 'Test dataset'
   data_source_name: 'staging9'
   models: [
     public_activities

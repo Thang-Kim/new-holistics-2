@@ -21,6 +21,12 @@ Model ecommerce_categories {
     hidden: false
     definition: @sql {{ #SOURCE.parent_id }};;
   }
+  dimension dim_but_looks_like_metric_count {
+    label: 'Dim But Looks Like Metric Count'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.CO2_Per_Capita__metric_tons_ }};;
+  }
 
   owner: 'my.nguyen@holistics.io'
   table_name: '"ecommerce"."categories"'
