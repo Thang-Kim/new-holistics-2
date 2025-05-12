@@ -1,0 +1,38 @@
+Dashboard untitled_2 {
+  title: 'Untitled'
+  block v1: VizBlock {
+    viz: DataTable {
+      dataset: vinhhh_test_activities
+      fields: [
+        VizFieldFull {
+          ref: ref('public_activities', 'trackable_type')
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: ref('public_activities', 'owner_type')
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: ref('public_activities', 'key')
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      settings {
+        show_row_number: true
+      }
+    }
+  }
+  interactions: []
+  view: CanvasLayout {
+    label: 'View 1'
+    height: 840
+    grid_size: 20
+  }
+  theme: H.themes.classic
+}
