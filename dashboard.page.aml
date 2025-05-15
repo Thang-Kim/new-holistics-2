@@ -116,16 +116,22 @@ Dashboard dashboard {
   }
   view: CanvasLayout {
     label: 'View 1'
-    width: 1220
-    height: 1030
+    width: 650
+    height: 870
     block filter_block {
-      position: pos(60, 880, 400, 80)
+      position: pos(20, 780, 400, 80)
     }
     block v1 {
-      position: pos(80, 30, 620, 420)
+      position: pos(20, 20, 620, 420)
     }
     block v2 {
-      position: pos(50, 500, 650, 320)
+      position: pos(20, 450, 620, 320)
+    }
+    mobile {
+      mode: 'manual'
+      block v1
+      block filter_block
+      block v2
     }
     block t1 {
       position: pos(750, 90, 80, 50)
@@ -157,4 +163,5 @@ Dashboard dashboard {
     }
     grid_size: 20
   }
+  theme: H.themes.classic
 }
