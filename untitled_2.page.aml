@@ -111,6 +111,32 @@ Dashboard untitled_2 {
       }
     }
   }
+  block v5: VizBlock {
+    label: 'abc'
+    viz: DataTable {
+      dataset: vinhhh_test_activities
+      theme {
+
+      }
+      fields: [
+        VizFieldFull {
+          ref: ref('public_activities', 'trackable_type')
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: ref('public_activities', 'owner_type')
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      settings {
+        show_row_number: true
+      }
+    }
+  }
   view: CanvasLayout {
     label: 'View 1'
     height: 840
@@ -126,6 +152,10 @@ Dashboard untitled_2 {
     block v4 {
       position: pos(40, 360, 400, 300)
       layer: 3
+    }
+    block v5 {
+      position: pos(460, 340, 400, 300)
+      layer: 4
     }
   }
   theme: H.themes.classic
