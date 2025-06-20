@@ -1,0 +1,11 @@
+Dataset activitites {
+  label: 'Activitites'
+  description: ''
+  data_source_name: 'staging9'
+  models: [
+    public_activities
+  ]
+  relationships: [
+  ]
+  owner: 'bao.lq@holistics.io'
+}
