@@ -1,0 +1,38 @@
+Model csv_vux {
+  type: 'table'
+  label: 'Csv_vux'
+  description: ''
+  data_source_name: 'khai_postgre'
+  dimension month_created_at {
+    label: 'Month Created At'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.month_created_at }};;
+  }
+  dimension age_group_2 {
+    label: 'Age Group 2'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.age_group_2 }};;
+  }
+  dimension count_of_id {
+    label: 'Count Of Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.count_of_id }};;
+  }
+  dimension count_of_id_prev_1_y {
+    label: 'Count Of Id Prev 1 Y'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.count_of_id_prev_1_y }};;
+  }
+
+  import_source: ImportSource {
+    type: 'csv'
+    source: 'test-export-2.csv'
+    uploaded_at: '2025-07-03 03:47:47'
+  }
+  owner: 'vu.dq@holistics.io'
+  table_name: '"public"."persisted_test_export_2_csv6"'
+}
