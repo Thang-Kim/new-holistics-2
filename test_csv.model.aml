@@ -1,0 +1,38 @@
+Model test_csv {
+  type: 'table'
+  label: 'Test_csv'
+  description: ''
+  data_source_name: 'khai_postgre'
+  dimension month_created_at {
+    label: 'Month Created At'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.month_created_at }};;
+  }
+  dimension age_group {
+    label: 'Age Group'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.age_group }};;
+  }
+  dimension count_of_id {
+    label: 'Count Of Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.count_of_id }};;
+  }
+  dimension count_of_id_prev_1_y {
+    label: 'Count Of Id Prev 1 Y'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.count_of_id_prev_1_y }};;
+  }
+
+  import_source: ImportSource {
+    type: 'csv'
+    source: 'test-export-2.csv'
+    uploaded_at: '2025-07-16 04:55:59'
+  }
+  owner: 'vu.dq@holistics.io'
+  table_name: '"public"."persisted_test_export_2_csv16"'
+}
