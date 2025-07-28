@@ -1,0 +1,75 @@
+Model budget_csv {
+  type: 'table'
+  label: 'Budget_csv'
+  description: ''
+  data_source_name: 'khai_postgre'
+  dimension year {
+    label: 'Year'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.year }};;
+  }
+  dimension month {
+    label: 'Month'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.month }};;
+  }
+  dimension parent_category {
+    label: 'Parent Category'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.parent_category }};;
+  }
+  dimension child_level_1 {
+    label: 'Child Level 1'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.child_level_1 }};;
+  }
+  dimension child_level_2 {
+    label: 'Child Level 2'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.child_level_2 }};;
+  }
+  dimension child_level_3 {
+    label: 'Child Level 3'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.child_level_3 }};;
+  }
+  dimension child_level_4_detailed {
+    label: 'Child Level 4 Detailed'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.child_level_4_detailed }};;
+  }
+  dimension note {
+    label: 'Note'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.note }};;
+  }
+  dimension actual_spent_finalize {
+    label: 'Actual Spent Finalize'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.actual_spent_finalize }};;
+  }
+  dimension payment_mode {
+    label: 'Payment Mode'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.payment_mode }};;
+  }
+
+  import_source {
+    type: 'csv'
+    original_file_name: 'budget.csv'
+    uploaded_at: '2025-07-28 02:16:14'
+    hash: 'b42b9e7f1561d8f86178d7c90d411a6badd02a77b8858f995b45f4fbc331ba67'
+  }
+  owner: 'vu.dq@holistics.io'
+  table_name: '"public"."persisted_budget_csv22"'
+}
