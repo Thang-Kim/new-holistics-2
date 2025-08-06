@@ -3,12 +3,14 @@ Model guests_list_csv {
   label: 'Guests_list_csv'
   description: ''
   data_source_name: 'khai_postgre'
-  dimension full_name {
-    label: 'Full Name'
-    type: 'text'
-    hidden: false
-    definition: @sql {{ #SOURCE.full_name }};;
-  }
+
+  // dimension 한국어테스트 {
+  //   label: 'Full Name'
+  //   type: 'text'
+  //   hidden: false
+  //   definition: @sql {{ #SOURCE.full_name }};;
+  // }
+
   dimension booking_id {
     label: 'Booking Id'
     type: 'text'

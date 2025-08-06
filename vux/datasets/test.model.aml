@@ -1,0 +1,19 @@
+Model test1 {
+  type: 'query'
+  label: 'Test'
+  description: ''
+  data_source_name: 'khai_postgre'
+
+  dimension column {
+    label: '한국어테스트'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.한국어테스트 }};;
+  }
+  // Test Korean or Chinese characters in query model
+
+  owner: 'vu.dq@holistics.io'
+  query: @sql select 1 AS "한국어테스트";;
+  models: [
+  ]
+}
