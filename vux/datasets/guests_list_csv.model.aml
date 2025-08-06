@@ -11,7 +11,7 @@ Model guests_list_csv {
   }
   dimension booking_id {
     label: 'Booking Id'
-    type: 'number'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.booking_id }};;
   }
