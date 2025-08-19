@@ -33,11 +33,11 @@ Model null_value_csv {
     original_file_name: 'null-value.csv'
     uploaded_at: '2025-08-08 04:03:16'
     hash: 'ea6ed7a46b8492b11dbb9e9d2742d08f741a6f12f9487ed67267f981f068949d'
-    custom_mappings: [
-      custom_mapping("name", "name", "text"),
-      custom_mapping("age", "age", "text"),
-      custom_mapping("city", "city", "text"),
-      custom_mapping("salary", "salary", "number")
+    field_preferences: [
+      field_preference("name", "name", "text"),
+      field_preference("age", "age", "text"),
+      field_preference("city", "city", "text"),
+      field_preference("salary", "salary", "number")
     ]
   }
   owner: 'vu.dq@holistics.io'

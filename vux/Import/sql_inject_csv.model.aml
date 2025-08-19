@@ -27,10 +27,10 @@ Model sql_inject_csv {
     original_file_name: 'sql-inject.csv'
     uploaded_at: '2025-08-08 04:13:39'
     hash: '887f688e5b41d29b5a238bf56c1217d7258f7827f77b20985c06ccb28c47b4cb'
-    custom_mappings: [
-      custom_mapping("name", "name", "text"),
-      custom_mapping("comment", "comment", "text"),
-      custom_mapping("status", "status", "text")
+    field_preferences: [
+      field_preference("name", "name", "text"),
+      field_preference("comment", "comment", "text"),
+      field_preference("status", "status", "text")
     ]
   }
   owner: 'vu.dq@holistics.io'

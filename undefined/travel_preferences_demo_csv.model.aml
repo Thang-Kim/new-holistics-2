@@ -57,15 +57,15 @@ Model travel_preferences_demo_csv {
     original_file_name: 'travel-preferences-test.csv'
     uploaded_at: '2025-08-06 09:24:43'
     hash: '4197d483a2f1a9ea314bff589957b90158f00ba053b6937b1a269f1192a04f78'
-    custom_mappings: [
-      custom_mapping("respondent_id", "respondent_id", "number"),
-      custom_mapping("preferred_destination_type", "preferred_destination_type", "text"),
-      custom_mapping("preferred_region_country", "preferred_region_country", "text"),
-      custom_mapping("favorite_aspect_to_explore", "favorite_aspect_to_explore", "text"),
-      custom_mapping("budget_range", "budget_range", "text"),
-      custom_mapping("travel_frequency", "travel_frequency", "text"),
-      custom_mapping("preferred_accommodation_type", "preferred_accommodation_type", "text"),
-      custom_mapping("desired_travel_duration", "desired_travel_duration", "text")
+    field_preferences: [
+      field_preference("respondent_id", "respondent_id", "number"),
+      field_preference("preferred_destination_type", "preferred_destination_type", "text"),
+      field_preference("preferred_region_country", "preferred_region_country", "text"),
+      field_preference("favorite_aspect_to_explore", "favorite_aspect_to_explore", "text"),
+      field_preference("budget_range", "budget_range", "text"),
+      field_preference("travel_frequency", "travel_frequency", "text"),
+      field_preference("preferred_accommodation_type", "preferred_accommodation_type", "text"),
+      field_preference("desired_travel_duration", "desired_travel_duration", "text")
     ]
   }
   owner: 'vu.dq@holistics.io'

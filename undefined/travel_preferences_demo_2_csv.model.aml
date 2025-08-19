@@ -57,7 +57,7 @@ Model travel_preferences_demo_2_csv {
     original_file_name: 'travel-preferences-demo2.csv'
     uploaded_at: '2025-08-04 04:11:04'
     hash: '4197d483a2f1a9ea314bff589957b90158f00ba053b6937b1a269f1192a04f78'
-    custom_mappings: [
+    field_preferences: [
     ]
   }
   owner: 'vu.dq@holistics.io'

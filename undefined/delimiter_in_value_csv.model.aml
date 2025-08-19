@@ -27,10 +27,10 @@ Model delimiter_in_value_csv {
     original_file_name: 'delimiter-in-value.csv'
     uploaded_at: '2025-08-05 09:15:07'
     hash: 'a9699a4512811ef23361b3c3e2f42ac05b717f97378ef63acf5c42ea537ce6cb'
-    custom_mappings: [
-      custom_mapping("name", "name", "text"),
-      custom_mapping("address", "address", "text"),
-      custom_mapping("note", "note", "text")
+    field_preferences: [
+      field_preference("name", "name", "text"),
+      field_preference("address", "address", "text"),
+      field_preference("note", "note", "text")
     ]
   }
   owner: 'vu.dq@holistics.io'

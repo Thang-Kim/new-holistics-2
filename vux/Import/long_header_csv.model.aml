@@ -27,10 +27,10 @@ Model long_header_csv {
     original_file_name: 'long-header.csv'
     uploaded_at: '2025-08-08 03:48:55'
     hash: 'fc9bb529705531dd0a9fd4459e84446bbb4836e4165b05f9e271722fd5d731f0'
-    custom_mappings: [
-      custom_mapping("name", "name", "text"),
-      custom_mapping("this_is_an_extremely_long_column_name_that_might_cause_database_issues_because_it_exceeds_normal_limits_abcdefghi_jklmnopq_rstuvwxyz", "this_is_an_extremely_long_column_name_that_might_cause_database_issues_because_it_exceeds_normal_limits_abcdefghi_jklmnopq_rstuvwxyz", "text"),
-      custom_mapping("age", "age", "number")
+    field_preferences: [
+      field_preference("name", "name", "text"),
+      field_preference("this_is_an_extremely_long_column_name_that_might_cause_database_issues_because_it_exceeds_normal_limits_abcdefghi_jklmnopq_rstuvwxyz", "this_is_an_extremely_long_column_name_that_might_cause_database_issues_because_it_exceeds_normal_limits_abcdefghi_jklmnopq_rstuvwxyz", "text"),
+      field_preference("age", "age", "number")
     ]
   }
   owner: 'vu.dq@holistics.io'

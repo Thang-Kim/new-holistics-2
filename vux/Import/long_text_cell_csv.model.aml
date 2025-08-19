@@ -27,10 +27,10 @@ Model long_text_cell_csv {
     original_file_name: 'long-text-cell.csv'
     uploaded_at: '2025-08-08 03:57:14'
     hash: '921159565a8e5ba690aba6690ed5c46830eee0d9204f6c94340f580f5b5c037b'
-    custom_mappings: [
-      custom_mapping("name", "name", "text"),
-      custom_mapping("description", "description", "text"),
-      custom_mapping("age", "age", "number")
+    field_preferences: [
+      field_preference("name", "name", "text"),
+      field_preference("description", "description", "text"),
+      field_preference("age", "age", "number")
     ]
   }
   owner: 'vu.dq@holistics.io'
