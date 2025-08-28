@@ -30,9 +30,9 @@ Model boolean_csv {
 
   import_source {
     type: 'csv'
-    original_file_name: 'boolean.csv'
-    uploaded_at: '2025-08-13 07:33:45'
-    hash: '4e2b90605a1401bdba95b027536bc143b3247d75a06ba1f356d8c664f30f426b'
+    original_file_name: 'boolean-updated.csv'
+    uploaded_at: '2025-08-28 08:03:06'
+    hash: 'cd3c993570105292e63778315f9a598fb9d96397412d7e6d35b2e2e2b2414eab'
     field_preferences: [
       field_preference("name", "name", "text"),
       field_preference("age", "age", "number"),
