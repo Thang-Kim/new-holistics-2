@@ -338,16 +338,32 @@ Dashboard new_canvas_dashboard {
       }
     }
   }
+  block f_h262: FilterBlock {
+    label: 'Financial Month'
+    type: 'field'
+    source: FieldFilterSource {
+      dataset: ecommerce_dataset
+      field: r(ecommerce_financial.month)
+    }
+    default {
+      operator: 'matches'
+      value: '$H_NIL$'
+    }
+  }
   view: TabLayout {
     label: 'View 1'
     tab tab1: CanvasLayout {
       label: 'Tab 1'
-      height: 800
+      height: 890
       block v1 {
-        position: pos(10, -10, 810, 420)
+        position: pos(20, 90, 810, 420)
       }
       block v2 {
-        position: pos(40, 430, 790, 360)
+        position: pos(20, 520, 790, 360)
+      }
+      block f_h262 {
+        position: pos(20, 10, 300, 80)
+        layer: 1
       }
     }
     tab tab2: CanvasLayout {
@@ -359,4 +375,15 @@ Dashboard new_canvas_dashboard {
       }
     }
   }
+  interactions: [
+    FilterInteraction {
+      from: 'f_h262'
+      to: [
+        CustomMapping {
+          block: 'v2'
+          field: ref('ecommerce_financial', 'month')
+        }
+      ]
+    }
+  ]
 }
