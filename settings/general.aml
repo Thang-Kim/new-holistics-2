@@ -1,3 +1,10 @@
 //  ImportSettings {
 //    default_schema: 'public'
 //  }
+
+// ImportSettings: {
+//   default_schema:
+//     if (data_source_name == 'demodb_vux') {'default'} 
+//     else if (data_source_name == 'khai_postgres') {'test'}
+//     else {'public'}
+// }
