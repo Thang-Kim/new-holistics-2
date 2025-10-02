@@ -1,0 +1,41 @@
+Model spike_csv_2 {
+  type: 'table'
+  label: 'Spike csv 2'
+  description: ''
+  data_source_name: 'demodb_vux'
+  dimension year {
+    label: 'Year'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.year }};;
+  }
+  dimension month_name {
+    label: 'Month name'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.month_name }};;
+  }
+  dimension sales {
+    label: 'Sales'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.sales }};;
+  }
+
+  import_source: ImportSource {
+    type: 'csv'
+    original_file_name: 'spike.csv'
+    uploaded_at: '2025-10-02 08:38:50'
+    hash: 'e9df9e87cf2a1e2c2d9936c97bbea87c23892cb319dd76a303391f730b7bde61'
+    column_configs: [
+      H.imports.column_config("year", "year", "number"),
+      H.imports.column_config("month_name", "month_name", "text"),
+      H.imports.column_config("sales", "sales", "text")
+    ]
+  }
+  owner: 'vu.dq@holistics.io'
+  table_name: '`holistics_spike_77ce5_20251002083849`'
+}
