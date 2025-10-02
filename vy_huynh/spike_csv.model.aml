@@ -20,7 +20,7 @@ Model spike_csv {
   dimension sales {
     label: 'Sales'
     description: ''
-    type: 'text'
+    type: 'number'
     hidden: false
     definition: @sql {{ #SOURCE.sales }};;
   }
