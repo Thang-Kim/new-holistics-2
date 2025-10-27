@@ -9,6 +9,8 @@ Dataset homestay_dataset {
     homestay_listings,
     homestay_bookings,
     homestay_hosts
+    ,
+    test_sql
   ]
   relationships: [
     relationship(homestay_listings.host_id > homestay_hosts.id, true),

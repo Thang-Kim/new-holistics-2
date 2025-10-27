@@ -1,0 +1,54 @@
+Model test_sql {
+  type: 'query'
+  label: 'Test Sql'
+  description: ''
+  data_source_name: 'khai_postgre'
+  dimension respondent_id {
+    label: 'Respondent Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.respondent_id }};;
+  }
+  dimension preferred_destination_type {
+    label: 'Preferred Destination Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.preferred_destination_type }};;
+  }
+  dimension favorite_aspect_to_explore {
+    label: 'Favorite Aspect To Explore'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.favorite_aspect_to_explore }};;
+  }
+  dimension budget_range {
+    label: 'Budget Range'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.budget_range }};;
+  }
+  dimension travel_frequency {
+    label: 'Travel Frequency'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.travel_frequency }};;
+  }
+  dimension preferred_accommodation_type {
+    label: 'Preferred Accommodation Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.preferred_accommodation_type }};;
+  }
+  dimension desired_travel_duration {
+    label: 'Desired Travel Duration'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.desired_travel_duration }};;
+  }
+
+  owner: 'vu.dq@holistics.io'
+  query: @sql select * from {{ #test }};;
+  models: [
+    test
+  ]
+}
