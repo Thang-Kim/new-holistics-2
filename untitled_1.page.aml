@@ -50,7 +50,6 @@ Dashboard untitled_1 {
         },
         VizFieldFull {
           ref: 'f_a02fbd2'
-          aggregation: 'count'
           format {
             type: 'number'
             pattern: 'inherited'
