@@ -29,22 +29,27 @@ Dashboard untitled_1 {
     label: 'Untitled Report'
     viz: DataTable {
       dataset: vinhhh_test_activities
-      theme {
-
+      calculation f_a02fbd2 {
+        label: 'count owner id'
+        formula: @aql count(public_activities.owner_id);;
+        calc_type: 'measure'
+        data_type: 'number'
       }
       fields: [
         VizFieldFull {
-          ref: ref('public_activities', 'created_at')
+          ref: r(public_activities.created_at)
           format {
             type: 'datetime'
           }
         },
         VizFieldFull {
-          ref: ref('public_activities', 'owner_type')
+          ref: r(public_activities.owner_type)
+          aggregation: 'count'
           format {
             type: 'text'
           }
-        }
+        },
+        r(vinhhh_test_activities.countownerid)
       ]
       settings {
         show_row_number: true
