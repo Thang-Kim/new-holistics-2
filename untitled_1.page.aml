@@ -44,17 +44,12 @@ Dashboard untitled_1 {
         },
         VizFieldFull {
           ref: r(public_activities.owner_type)
+          aggregation: 'count'
           format {
             type: 'text'
           }
         },
-        VizFieldFull {
-          ref: 'f_a02fbd2'
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        }
+        r(vinhhh_test_activities.countownerid)
       ]
       settings {
         show_row_number: true
