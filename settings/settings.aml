@@ -1,0 +1,10 @@
+ProjectSettings project_settings {
+  dashboard {
+    default_template: dashboard_1
+  }
+}
+
+//Import: default schema
+  // import_settings {
+  //   default_schema: 'public'
+  // }
