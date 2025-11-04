@@ -1,6 +1,6 @@
 @tag('1️⃣ Trust/Endorsed')
 Dataset ecommerce_official {
-  label: 'ecommerce_official'
+  label: 'Ecommerce Official'
   description: ''
   data_source_name: 'demodb'
   models: [
