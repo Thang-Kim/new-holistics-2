@@ -12,6 +12,8 @@ Dataset ecommerce_official {
     merchants,
     countries,
     cities
+    ,
+    user_lookup_csv
   ]
   relationships: [
     relationship(orders.user_id > users.id, true)
@@ -29,5 +31,7 @@ Dataset ecommerce_official {
     relationship(products.merchant_id > merchants.id, true)
     ,
     relationship(products.category_id > categories.id, true)
+    ,
+    relationship(users.id - user_lookup_csv.user_id, true)
   ]
 }
