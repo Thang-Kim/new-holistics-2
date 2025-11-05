@@ -80,7 +80,7 @@ Dashboard rich_text_demo {
     }
   }
   block v_z3mq: VizBlock {
-    label: 'Product name, Added to cart and 6 more'
+    label: 'Add-to-Carts vs. Purchases'
     viz: MarkdownViz {
       dataset: product_performance
       rows: [
@@ -308,7 +308,7 @@ Dashboard rich_text_demo {
     </div>
   </div>
 {% end %}
-</div> ;;
+</div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -717,7 +717,7 @@ Dashboard rich_text_demo {
     content: @md This is 2025's top 10 best selling Products;;
   }
   block v_fyrn: VizBlock {
-    label: 'Id and Full Name'
+    label: 'User Table'
     viz: DataTable {
       dataset: ecommerce_official
       filter {
@@ -753,7 +753,7 @@ Dashboard rich_text_demo {
     }
   }
   block v_93o5: VizBlock {
-    label: 'Total Price and Revenue by Name, Product Image Url, and Category Name'
+    label: 'Product Overview'
     viz: MarkdownViz {
       dataset: ecommerce_official
       calculation revenue {
@@ -1121,7 +1121,7 @@ padding-right: 0.50rem;
 
 {% end %}
 
-</ul> ;;
+</ul>  ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -1147,16 +1147,12 @@ padding-right: 0.50rem;
         layer: 3
       }
       block t_8699 {
-        position: pos(660, 120, 360, 60)
+        position: pos(660, 120, 360, 240)
         layer: 4
       }
       block t_eap8 {
-        position: pos(660, 560, 360, 60)
+        position: pos(660, 560, 360, 240)
         layer: 4
-      }
-      block v_93o5 {
-        position: pos(20, 1000, 500, 340)
-        layer: 5
       }
       mobile {
         mode: 'auto'
@@ -1179,10 +1175,14 @@ padding-right: 0.50rem;
     }
     tab tab_88q9: CanvasLayout {
       label: 'Card Grid'
-      width: 1300
-      height: 800
+      width: 1060
+      height: 1180
       grid_size: 20
       auto_expand_vertically: true
+      block v_93o5 {
+        position: pos(20, 20, 1020, 1140)
+        layer: 5
+      }
       mobile {
         mode: 'auto'
       }
