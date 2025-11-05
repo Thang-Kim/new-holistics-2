@@ -755,7 +755,7 @@ Dashboard rich_text_demo {
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
-      label: 'Tab 1'
+      label: 'Boring and Static'
       height: 800
       grid_size: 20
       block f1 {
@@ -784,7 +784,7 @@ Dashboard rich_text_demo {
       width: 1040
     }
     tab tab_t2lk: CanvasLayout {
-      label: 'Rich Text Demo 1'
+      label: 'Dumbbell Plot'
       width: 1300
       height: 1020
       grid_size: 20
@@ -798,7 +798,7 @@ Dashboard rich_text_demo {
       }
     }
     tab tab_88q9: CanvasLayout {
-      label: 'Rich Text Demo 2'
+      label: 'Card Grid'
       width: 1300
       height: 800
       grid_size: 20
@@ -808,7 +808,7 @@ Dashboard rich_text_demo {
       }
     }
     tab tab_jdlc: CanvasLayout {
-      label: 'Rich Text Demo 3'
+      label: 'Record Lookup'
       width: 1080
       height: 560
       grid_size: 20
@@ -823,34 +823,6 @@ Dashboard rich_text_demo {
       }
       mobile {
         mode: 'auto'
-      }
-    }
-    tab tab_jlbb: CanvasLayout {
-      label: 'Card Grid'
-      width: 1340
-      height: 1460
-      grid_size: 20
-      auto_expand_vertically: true
-      mobile {
-        mode: 'auto'
-      }
-      block v_p4lx {
-        position: pos(20, 20, 1300, 1420)
-        layer: 3
-      }
-    }
-    tab tab_5gm0: CanvasLayout {
-      label: 'Dumbell Plot'
-      width: 1300
-      height: 1040
-      grid_size: 20
-      auto_expand_vertically: true
-      mobile {
-        mode: 'auto'
-      }
-      block v_pfcb {
-        position: pos(20, 20, 1260, 1000)
-        layer: 1
       }
     }
   }
