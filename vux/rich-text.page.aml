@@ -84,7 +84,6 @@ Dashboard rich_text_demo {
     viz: DataTable {
       dataset: vinhhh_test_activities
       theme {
-
       }
       fields: [
         VizFieldFull {
