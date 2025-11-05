@@ -1,4 +1,4 @@
-Dashboard untitled_4 {
+Dashboard rich_text_demo {
   title: 'Rich Text'
   description: ''''''
   block f1: FilterBlock {
