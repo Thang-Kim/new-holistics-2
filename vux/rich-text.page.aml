@@ -1270,7 +1270,7 @@ padding-right: 0.50rem;
     <strong>Top Performers:</strong> Dumbbells (<span class="insights-badge">{{ rows[0].`Purchased` }}</span>), Fitness Tracker (<span class="insights-badge">{{ rows[1].`Purchased` }}</span>), and Wireless Headphones (<span class="insights-badge">{{ rows[2].`Purchased` }}</span>) lead in actual sales conversions.
   </p></li>
   <li><p style="margin-bottom: 1rem; line-height: 1.8;">
-    <strong>Largest Cart Abandonment:</strong> Exercise Bike shows the biggest gap with <span class="insights-badge red">{{ rows[3].`Cart abandonment` }} abandoned</span> (<span style="color: #DC2626; font-weight: 600;">{{ rows[3].`Added to cart` }}</span> added vs. <span style="color: #0891F2; font-weight: 600;">{{ rows[3].`Purchased` }}</span> purchased), followed by Resistance Bands (<span class="insights-badge red">{{ rows[4].`Cart abandonment` }} gap</span>) and Yoga Mat (<span class="insights-badge red">{{ rows[5].`Cart abandonment` }} gap</span>).
+    <strong>Largest Cart Abandonment:</strong> Exercise Bike shows a big gap with <span class="insights-badge red">{{ rows[3].`Cart abandonment` }} abandoned</span> (<span style="color: #DC2626; font-weight: 600;">{{ rows[3].`Added to cart` }}</span> added vs. <span style="color: #0891F2; font-weight: 600;">{{ rows[3].`Purchased` }}</span> purchased), followed by Resistance Bands (<span class="insights-badge red">{{ rows[4].`Cart abandonment` }} gap</span>) and Yoga Mat (<span class="insights-badge red">{{ rows[5].`Cart abandonment` }} gap</span>).
   </p></li>
   <li><p style="margin-bottom: 1rem; line-height: 1.8;">
     <strong>High Conversion Rate:</strong> Dumbbells demonstrates the strongest purchase intent with only a <span class="insights-badge green">{{ rows[0].`Cart abandonment` }}-unit gap</span>, while Jump Rope (<span class="insights-badge green">{{ rows[6].`Cart abandonment` }} gap</span>) and Fitness Tracker (<span class="insights-badge green">{{ rows[1].`Cart abandonment` }} gap</span>) also show relatively strong conversion.
@@ -1279,7 +1279,7 @@ padding-right: 0.50rem;
     <strong>Opportunity Area:</strong> Products with <span class="insights-badge red">&gt;200 gap</span> suggest potential for targeted remarketing campaigns or checkout optimization.
   </p></li>
   </ul>
-</div> ;;
+</div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
