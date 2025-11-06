@@ -1215,7 +1215,7 @@ padding-right: 0.50rem;
           }
         }
       ]
-      content: @md <div style="padding: 1rem; max-width: 800px; font-size: 0.9rem; line-height: 1.5; color: #374151;">
+      content: @md <div style="padding: 0.5rem; max-width: 800px; font-size: 0.9rem; line-height: 1.5; color: #374151;">
     <p><strong>Key Insights:</strong></p>
     <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
       <li><strong>Top Performers:</strong> Dumbbells (500 purchases), Exercise Bike (180 purchases),
@@ -1229,7 +1229,7 @@ padding-right: 0.50rem;
       <li><strong>Opportunity Area:</strong> Exercise Bike and Resistance Bands have significant cart
   abandonment, suggesting potential for targeted remarketing campaigns or checkout optimization.</li>
     </ul>
-  </div> ;;
+  </div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -1266,7 +1266,7 @@ padding-right: 0.50rem;
     tab tab_sf0p: CanvasLayout {
       label: '🔥 Dynamic Summary'
       width: 820
-      height: 740
+      height: 700
       grid_size: 20
       auto_expand_vertically: true
       block v4 {
@@ -1274,7 +1274,7 @@ padding-right: 0.50rem;
         layer: 2
       }
       block v_x1m6 {
-        position: pos(20, 400, 780, 320)
+        position: pos(20, 400, 780, 280)
         layer: 1
       }
       mobile {
