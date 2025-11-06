@@ -1,14 +1,6 @@
 Dashboard rich_text_demo {
   title: 'Rich Text'
   description: ''''''
-  block f1: FilterBlock {
-    label: 'This is a Filter Block'
-    type: 'text'
-    default {
-      operator: 'is'
-      value: 'default'
-    }
-  }
   block v4: VizBlock {
     label: 'Name and Parent'
     viz: DataTable {
@@ -1156,30 +1148,107 @@ padding-right: 0.50rem;
       }
     }
   }
+  block v_x1m6: VizBlock {
+    label: 'Add-to-Carts vs. Purchases'
+    viz: MarkdownViz {
+      dataset: product_performance
+      rows: [
+        VizFieldFull {
+          ref: r(product_sales_performance_new_csv.product_name)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_sales_performance_new_csv.added_to_cart)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_sales_performance_new_csv.purchased)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_sales_performance_new_csv.cart_abandonment)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_sales_performance_new_csv.conversion_rate)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_performance, product_sales_performance_new_csv.start_percent)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_performance, product_sales_performance_new_csv.end_percent)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(product_performance, product_sales_performance_new_csv.bar_width)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        }
+      ]
+      content: @md <div style="padding: 1rem; max-width: 800px; font-size: 0.9rem; line-height: 1.5; color: #374151;">
+    <p><strong>Key Insights:</strong></p>
+    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+      <li><strong>Top Performers:</strong> Dumbbells (500 purchases), Exercise Bike (180 purchases),
+  and Fitness Tracker (450 purchases) lead in actual sales conversions.</li>
+      <li><strong>Largest Cart Abandonment:</strong> Exercise Bike shows the biggest gap with 320
+  abandoned carts (500 added vs. 180 purchased), followed by Resistance Bands (240 gap) and Yoga Mat
+  (210 gap).</li>
+      <li><strong>High Conversion Rate:</strong> Dumbbells demonstrate the strongest purchase intent
+  with only a 20-unit gap, while Jump Rope (60 gap) and Running Shoes (100 gap) also show relatively
+  strong conversion.</li>
+      <li><strong>Opportunity Area:</strong> Exercise Bike and Resistance Bands have significant cart
+  abandonment, suggesting potential for targeted remarketing campaigns or checkout optimization.</li>
+    </ul>
+  </div> ;;
+      settings {
+        show_row_total: true
+        show_column_total: true
+      }
+    }
+  }
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
       label: '🥱 Boring and Static'
-      height: 1360
+      height: 840
       grid_size: 20
-      block f1 {
-        position: pos(20, 20, 400, 80)
-        layer: 1
-      }
       block v4 {
-        position: pos(20, 120, 620, 360)
+        position: pos(20, 20, 620, 360)
         layer: 2
       }
       block v5 {
-        position: pos(20, 500, 620, 420)
+        position: pos(20, 400, 620, 420)
         layer: 3
       }
       block t_8699 {
-        position: pos(660, 120, 360, 240)
+        position: pos(660, 20, 360, 240)
         layer: 4
       }
       block t_eap8 {
-        position: pos(660, 500, 360, 240)
+        position: pos(660, 400, 360, 240)
         layer: 4
       }
       mobile {
@@ -1190,11 +1259,15 @@ padding-right: 0.50rem;
     tab tab_t2lk: CanvasLayout {
       label: '🔥 Dumbbell Plot'
       width: 900
-      height: 700
+      height: 1000
       grid_size: 20
       auto_expand_vertically: true
       block v_z3mq {
-        position: pos(20, 20, 860, 660)
+        position: pos(20, 320, 860, 660)
+        layer: 1
+      }
+      block v_x1m6 {
+        position: pos(20, 20, 840, 300)
         layer: 1
       }
       mobile {
