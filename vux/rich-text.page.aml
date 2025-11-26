@@ -2,7 +2,7 @@ Dashboard rich_text_demo {
   title: 'Rich Text'
   description: ''''''
   block v4: VizBlock {
-    label: 'Name and Parent'
+    label: 'Product'
     viz: DataTable {
       dataset: product_performance
       calculation f_72dc36d {
