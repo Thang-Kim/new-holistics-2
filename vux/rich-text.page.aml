@@ -779,7 +779,7 @@ Exercise Bike and Resistance Bands have significant cart abandonment, suggesting
     label: 'Product Overview'
     viz: MarkdownViz {
       dataset: ecommerce_official
-      calculation revenue {
+      calculation revenue_1 {
         label: 'Revenue'
         formula: @aql sum(order_items, order_items.quantity * products.price);;
         calc_type: 'measure'
