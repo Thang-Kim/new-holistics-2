@@ -42,4 +42,12 @@ Dataset ecommerce_official {
     definition: @aql @(now);;
     model: orders
   }
+  metric revenue {
+    label: "Revenue"
+    type: "number"
+    hidden: false
+    description: ""
+    definition: @aql sum(order_items, order_items.quantity * products.price);;
+    format: "[\$\$]#,###0.00"
+  }
 }
