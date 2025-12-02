@@ -1471,7 +1471,7 @@ padding-right: 0.50rem;
   }
 
   .continent-icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1;
   }
 
@@ -1495,7 +1495,7 @@ padding-right: 0.50rem;
     <span class="continent-label">{{ `Continent` }}</span>
   </div>
 {% end %}
-</div> ;;
+</div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -1672,26 +1672,25 @@ padding-right: 0.50rem;
     tab tab_mza6: CanvasLayout {
       label: 'Control Buttons 2'
       width: 675
-      height: 690
-      grid_size: 15
+      height: 695
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
       block v_ce7h {
-        position: pos(330, 195, 330, 120)
+        position: pos(340, 190, 310, 120)
         layer: 1
       }
       block v_r6cv {
-        position: pos(15, 15, 645, 180)
+        position: pos(20, 20, 630, 160)
         layer: 2
       }
       block v_eabd {
-        position: pos(15, 195, 315, 120)
+        position: pos(20, 190, 310, 120)
         layer: 1
       }
       block v_kcwp {
-        position: pos(15, 315, 645, 360)
+        position: pos(20, 320, 630, 360)
         layer: 3
       }
     }
