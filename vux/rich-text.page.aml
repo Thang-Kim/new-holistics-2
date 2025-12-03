@@ -1282,6 +1282,426 @@ padding-right: 0.50rem;
       }
     }
   }
+  block v_mp1q: VizBlock {
+    label: 'Total Users copy'
+    viz: MetricKpi {
+      dataset: ecommerce_official
+      value: VizFieldFull {
+        label: 'Total Users copy'
+        ref: r(users.id)
+        aggregation: 'count'
+        format {
+          type: 'number'
+          pattern: 'inherited'
+        }
+      }
+      settings {
+        alignment: 'center'
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
+  block v_thvr: VizBlock {
+    label: 'Country and Country Icon copy'
+    viz: MarkdownViz {
+      dataset: ecommerce_official
+      calculation continent_icon {
+        label: 'Continent Icon'
+        formula: @aql case(
+    when: countries.continent_name is 'Asia', then: '🌏',
+    when: countries.continent_name is 'North America', then: '🌎',
+    when: countries.continent_name is 'Europe', then: '🌍',
+    when: countries.continent_name is 'Oceania', then: '🌏',
+    else: '🌎'
+);;
+        calc_type: 'dimension'
+        data_type: 'text'
+        model: countries
+      }
+      calculation country_icon {
+        label: 'Country Icon'
+        formula: @aql case(
+    when: countries.name is 'Australia', then: '🇦🇺',
+    when: countries.name is 'France', then: '🇫🇷',
+    when: countries.name is 'Germany', then: '🇩🇪',
+    when: countries.name is 'India', then: '🇮🇳',
+    when: countries.name is 'Indonesia', then: '🇮🇩',
+    when: countries.name is 'Korea', then: '🇰🇷',
+    when: countries.name is 'Singapore', then: '🇸🇬',
+    when: countries.name is 'United Kingdom', then: '🇬🇧',
+    when: countries.name is 'United States', then: '🇺🇸',
+    when: countries.name is 'Vietnam', then: '🇻🇳',
+    else: '🌎'
+)
+;;
+        calc_type: 'dimension'
+        data_type: 'text'
+        model: countries
+      }
+      filter {
+        field: r(countries.name)
+        operator: 'is'
+        value: [
+          'United States',
+          'Vietnam',
+          'Singapore',
+          'Germany'
+        ]
+      }
+      rows: [
+        VizFieldFull {
+          label: 'Country'
+          ref: r(countries.name)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: ref('countries', 'country_icon')
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      content: @md <style>
+  .country-selector {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .country-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #FFFFFF;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .country-card:hover {
+    border-color: #3B82F6;
+    background: #F8FAFC;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  }
+
+  .country-card:active {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    transform: translateY(0);
+  }
+
+  .h-drill-selected {
+    color: green;
+  }
+
+  .country-card:has(.h-drill-selected) {
+    border-color: #2563EB;
+    background: #EFF6FF;
+    transform: translateY(0);
+  }
+
+  .country-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .country-label {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  .country-desc {
+    font-size: 0.75rem;
+    color: #6B7280;
+    line-height: 1.3;
+  }
+</style>
+
+<div class="country-selector">
+{% map(rows) %}
+  <div class="country-card">
+    <span class="country-icon">{{ `Country Icon` }}</span>
+    <span class="country-label">{{ `Country` }}</span>
+  </div>
+{% end %}
+</div>  ;;
+      settings {
+        show_row_total: true
+        show_column_total: true
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
+  block v_yi3y: VizBlock {
+    label: 'GMV copy'
+    viz: MetricKpi {
+      dataset: ecommerce_official
+      value: VizFieldFull {
+        label: 'GMV copy'
+        ref: r(ecommerce_official.revenue)
+      }
+      settings {
+        alignment: 'center'
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
+  block v_43sl: VizBlock {
+    label: 'Product Performance copy'
+    viz: DataTable {
+      dataset: ecommerce_official
+      fields: [
+        VizFieldFull {
+          ref: r(products.name)
+          format {
+            type: 'text'
+          }
+          uname: 'products_name'
+        },
+        VizFieldFull {
+          label: 'Count of Order'
+          ref: r(order_items.order_id)
+          aggregation: 'count'
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: r(order_items.quantity)
+          aggregation: 'sum'
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+          uname: 'sum_quantity_1'
+        }
+      ]
+      settings {
+        show_row_number: true
+        sorts: [
+          SortSetting {
+            key: 'sum_quantity_1'
+            direction: 'desc'
+          }
+        ]
+        column_styles: [
+          ColumnStyle {
+            key: 'products_name'
+            width: 249
+          }
+        ]
+      }
+    }
+  }
+  block v_7h5t: VizBlock {
+    label: 'Information copy'
+    viz: MarkdownViz {
+      dataset: ecommerce_official
+      calculation country_icon {
+        label: 'Country Icon'
+        formula: @aql case(
+    when: countries.name is 'Australia', then: '🇦🇺',
+    when: countries.name is 'France', then: '🇫🇷',
+    when: countries.name is 'Germany', then: '🇩🇪',
+    when: countries.name is 'India', then: '🇮🇳',
+    when: countries.name is 'Indonesia', then: '🇮🇩',
+    when: countries.name is 'Korea', then: '🇰🇷',
+    when: countries.name is 'Singapore', then: '🇸🇬',
+    when: countries.name is 'United Kingdom', then: '🇬🇧',
+    when: countries.name is 'United States', then: '🇺🇸',
+    when: countries.name is 'Vietnam', then: '🇻🇳',
+    else: '🌎'
+);;
+        calc_type: 'dimension'
+        data_type: 'text'
+        model: countries
+      }
+      calculation is_key_city {
+        label: 'Is Key City'
+        formula: @aql case(
+  when: cities.name == "New York",
+  then: true,
+  when: cities.name == "Paris",
+  then: true,
+  when: cities.name == "London",
+  then: true,
+  when: cities.name in ["Ha Noi", "Ho Chi Minh"],
+  then: true,
+  when: cities.name == "Jakarta",
+  then: true,
+  when: cities.name == "Canberra",
+  then: true,
+  when: cities.name == "Berlin",
+  then: true,
+  when: cities.name == "Singapore",
+  then: true,
+  when: cities.name == "Seoul",
+  then: true,
+  when: cities.name == "New Delhi",
+  then: true,
+  else: false
+);;
+        calc_type: 'dimension'
+        data_type: 'truefalse'
+        model: cities
+      }
+      filter {
+        field: ref('cities', 'is_key_city')
+        operator: 'is'
+        value: true
+      }
+      rows: [
+        VizFieldFull {
+          label: 'Country'
+          ref: r(countries.name)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: r(countries.code)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          ref: ref('countries', 'country_icon')
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          label: 'Continent'
+          ref: r(countries.continent_name)
+          format {
+            type: 'text'
+          }
+        },
+        VizFieldFull {
+          label: 'City'
+          ref: r(cities.name)
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      content: @md <style>
+  .country-info-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 1000px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .country-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .country-flag {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .country-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .country-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .country-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #6B7280;
+    background: #F3F4F6;
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+    width: fit-content;
+  }
+
+  .country-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #F3F4F6;
+  }
+
+  .detail-row:last-child {
+    border-bottom: none;
+  }
+
+  .detail-label {
+    font-size: 0.8125rem;
+    color: #6B7280;
+  }
+
+  .detail-value {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #111827;
+  }
+</style>
+
+<div class="country-info-card">
+  <div class="country-header">
+    <span class="country-flag">{{ rows[0].`Country Icon` }}</span>
+    <div class="country-title-group">
+      <span class="country-name">{{ rows[0].`Country` }}</span>
+      <span class="country-code">{{ rows[0].`Code` }}</span>
+    </div>
+  </div>
+
+  <div class="country-details">
+    <div class="detail-row">
+      <span class="detail-label">Continent</span>
+      <span class="detail-value">{{ rows[0].`Continent` }}</span>
+    </div>
+    <div class="detail-row">
+      <span class="detail-label">Key City</span>
+      <span class="detail-value">{{ rows[0].`City` }}</span>
+    </div>
+  </div>
+</div>   ;;
+      settings {
+        show_row_total: true
+        show_column_total: true
+      }
+    }
+  }
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
@@ -1373,6 +1793,36 @@ padding-right: 0.50rem;
         mode: 'auto'
       }
     }
+    tab tab_myst: CanvasLayout {
+      label: '🔥 Control Buttons'
+      width: 1000
+      height: 720
+      grid_size: 20
+      auto_expand_vertically: true
+      mobile {
+        mode: 'auto'
+      }
+      block v_mp1q {
+        position: pos(340, 190, 310, 120)
+        layer: 1
+      }
+      block v_thvr {
+        position: pos(20, 20, 630, 160)
+        layer: 2
+      }
+      block v_yi3y {
+        position: pos(20, 190, 310, 120)
+        layer: 1
+      }
+      block v_43sl {
+        position: pos(20, 320, 960, 380)
+        layer: 3
+      }
+      block v_7h5t {
+        position: pos(660, 20, 320, 290)
+        layer: 4
+      }
+    }
   }
   theme: H.themes.classic
   interactions: [
@@ -1380,7 +1830,14 @@ padding-right: 0.50rem;
       from: 'v_p5re'
       to: [
         CustomMapping {
-          block: 'v_93o5'
+          block: [
+            'v_93o5',
+            'v_mp1q',
+            'v_thvr',
+            'v_yi3y',
+            'v_43sl',
+            'v_7h5t'
+          ]
           disabled: true
         }
       ]
@@ -1389,7 +1846,14 @@ padding-right: 0.50rem;
       from: 'v_fyrn'
       to: [
         CustomMapping {
-          block: 'v_93o5'
+          block: [
+            'v_93o5',
+            'v_mp1q',
+            'v_thvr',
+            'v_yi3y',
+            'v_43sl',
+            'v_7h5t'
+          ]
           disabled: true
         }
       ]
@@ -1400,7 +1864,77 @@ padding-right: 0.50rem;
         CustomMapping {
           block: [
             'v_p5re',
-            'v_fyrn'
+            'v_fyrn',
+            'v_mp1q',
+            'v_thvr',
+            'v_yi3y',
+            'v_43sl',
+            'v_7h5t'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_mp1q'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o5'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_thvr'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o5'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_yi3y'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o5'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_43sl'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o5'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_7h5t'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o5'
           ]
           disabled: true
         }
