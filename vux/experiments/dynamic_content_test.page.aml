@@ -1,5 +1,5 @@
 Dashboard dynamic_content_test {
-  title: 'Rich Text'
+  title: 'Dynamic Content Experiments'
   description: ''''''
   owner: 'vu.dq@holistics.io'
 
@@ -1380,13 +1380,24 @@ padding-right: 0.50rem;
     color: #1D4ED8;
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
   }
+
+  .h-drill-selected {
+    color: #1B7CE4;
+  }
+
+  .period-pill:has(.h-drill-selected) {
+    border-color: #1B7CE4;
+    background: #EFF6FF;
+    transform: translateY(0);
+  }
+
 </style>
 
 <div class="period-pills">
 {% map(rows) %}
   <div class="period-pill">{{ `Period Label` }}</div>
 {% end %}
-</div>   ;;
+</div>    ;;
       settings {
         show_row_total: true
         show_column_total: true
