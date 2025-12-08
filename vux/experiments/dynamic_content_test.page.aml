@@ -2423,7 +2423,6 @@ padding-right: 0.50rem;
       }
     }
   }
-  theme: H.themes.oasis
   interactions: [
     FilterInteraction {
       from: 'v_p5re'
