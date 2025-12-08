@@ -2280,6 +2280,32 @@ padding-right: 0.50rem;
       }
     }
   }
+  block v_bzvx: VizBlock {
+    label: 'Syntax test'
+    viz: MarkdownViz {
+      dataset: ecommerce_official
+      calculation revenue_1 {
+        label: 'Revenue'
+        formula: @aql sum(order_items, order_items.quantity * products.price);;
+        calc_type: 'measure'
+        data_type: 'number'
+      }
+      rows: [
+        VizFieldFull {
+          label: 'Product Name'
+          ref: r(products.name)
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      content: @md <div>{{`Name`}}</div> ;;
+      settings {
+        show_row_total: true
+        show_column_total: true
+      }
+    }
+  }
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
@@ -2422,6 +2448,19 @@ padding-right: 0.50rem;
         mode: 'auto'
       }
     }
+    tab tab_ev8z: CanvasLayout {
+      label: 'Syntax'
+      width: 1160
+      grid_size: 20
+      auto_expand_vertically: true
+      mobile {
+        mode: 'auto'
+      }
+      block v_bzvx {
+        position: pos(20, 20, 1120, 420)
+      }
+      height: 460
+    }
   }
   interactions: [
     FilterInteraction {
@@ -2434,7 +2473,8 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a'
+            'v_i51a',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2450,7 +2490,8 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a'
+            'v_i51a',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2464,7 +2505,8 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a'
+            'v_i51a',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2482,7 +2524,8 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a'
+            'v_i51a',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2500,7 +2543,8 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a'
+            'v_i51a',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2515,7 +2559,8 @@ padding-right: 0.50rem;
             'v_fyrn',
             'v_0k2v',
             'v_g7tl',
-            'v_lhqm'
+            'v_lhqm',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2530,7 +2575,8 @@ padding-right: 0.50rem;
             'v_fyrn',
             'v_0k2v',
             'v_g7tl',
-            'v_lhqm'
+            'v_lhqm',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2549,7 +2595,8 @@ padding-right: 0.50rem;
             'v_mdra',
             'v_ggbb',
             'v_l0eq',
-            'v_vq7e'
+            'v_vq7e',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2565,7 +2612,8 @@ padding-right: 0.50rem;
             'v_93o6',
             'v_0k2v',
             'v_g7tl',
-            'v_lhqm'
+            'v_lhqm',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2581,7 +2629,8 @@ padding-right: 0.50rem;
             'v_93o6',
             'v_0k2v',
             'v_g7tl',
-            'v_lhqm'
+            'v_lhqm',
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2597,7 +2646,29 @@ padding-right: 0.50rem;
             'v_93o6',
             'v_0k2v',
             'v_g7tl',
-            'v_lhqm'
+            'v_lhqm',
+            'v_bzvx'
+          ]
+          disabled: true
+        }
+      ]
+    },
+    FilterInteraction {
+      from: 'v_bzvx'
+      to: [
+        CustomMapping {
+          block: [
+            'v_p5re',
+            'v_fyrn',
+            'v_93o6',
+            'v_0k2v',
+            'v_g7tl',
+            'v_mdra',
+            'v_ggbb',
+            'v_lhqm',
+            'v_l0eq',
+            'v_vq7e',
+            'v_i51a'
           ]
           disabled: true
         }
