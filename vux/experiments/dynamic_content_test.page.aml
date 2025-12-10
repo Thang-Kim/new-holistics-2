@@ -2299,7 +2299,40 @@ padding-right: 0.50rem;
           }
         }
       ]
-      content: @md <div>{{`Name`}}</div> ;;
+      columns: [
+        VizFieldFull {
+          ref: r(orders.status)
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      values: [
+        VizFieldFull {
+          ref: r(ecommerce_official.revenue)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        }
+      ]
+      content: @md {{ rows }}
+
+# Total
+
+## Column Total
+{{ col_totals }}
+
+## Row Total
+{{ row_totals }}
+
+## Grand Total
+{{ grand_totals }}
+
+# Cell ref
+
+## Bottom
+{{ rows.-2.`Product Name` }} ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -2450,16 +2483,16 @@ padding-right: 0.50rem;
     }
     tab tab_ev8z: CanvasLayout {
       label: 'Syntax'
-      width: 1160
+      width: 1180
       grid_size: 20
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
       block v_bzvx {
-        position: pos(20, 20, 1120, 420)
+        position: pos(20, 20, 1140, 1060)
       }
-      height: 460
+      height: 1100
     }
   }
   interactions: [
