@@ -43,41 +43,6 @@ Dashboard test_concurrent_edit_mhifc {
       }
     }
   }
-  block v3: VizBlock {
-    label: 'Edit by user 2'
-    viz: DataTable {
-      dataset: vinhhh_test_activities
-      theme {
-      }
-      fields: [
-        VizFieldFull {
-          ref: r(public_activities.trackable_type)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(public_activities.owner_type)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(public_activities.key)
-          format {
-            type: 'text'
-          }
-        }
-      ]
-      settings {
-        show_row_number: true
-        aggregate_awareness {
-          enabled: true
-          debug_comments: true
-        }
-      }
-    }
-  }
   block f1: FilterBlock {
     label: 'This is a Filter Block'
     type: 'text'
@@ -265,15 +230,11 @@ Dashboard test_concurrent_edit_mhifc {
   view: TabLayout {
     label: 'View 1'
     tab tab1: CanvasLayout {
-      label: 'Test by user 1'
+      label: 'Test by user 1 21212121'
       width: 1190
       height: 1100
       block v2 {
-        position: pos(440, 130, 620, 320)
-      }
-      block v3 {
-        position: pos(740, 120, 330, 220)
-        layer: 1
+        position: pos(270, 340, 620, 320)
       }
       block t_ozuv {
         position: pos(120, 100, 200, 50)
