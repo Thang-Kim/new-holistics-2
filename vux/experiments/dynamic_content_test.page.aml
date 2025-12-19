@@ -1779,7 +1779,7 @@ padding-right: 0.50rem;
     }
   }
   block v_lhqm: VizBlock {
-    label: 'Product Overview copy'
+    label: 'Product Overview'
     viz: MarkdownViz {
       dataset: ecommerce_official
       calculation revenue_1 {
