@@ -243,17 +243,27 @@ Dashboard test_concurrent_edit_mhifc {
       height: 800
       grid_size: 20
       block v4 {
-        position: pos(260, 460, 620, 420)
+        position: pos(380, 600, 620, 420)
         layer: 2
       }
       block v5 {
-        position: pos(100, 520, 620, 320)
+        position: pos(280, 440, 620, 320)
         layer: 3
       }
       block v6 {
-        position: pos(160, 540, 340, 220)
+        position: pos(20, 420, 340, 220)
         layer: 4
       }
+      mobile {
+        mode: 'auto'
+      }
+    }
+    tab tab_acej: CanvasLayout {
+      label: 'new tab'
+      width: 1300
+      height: 800
+      grid_size: 20
+      auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
