@@ -1,5 +1,5 @@
 Dashboard test_concurrent_edit_mhifc {
-  title: 'Test concurrent edit'
+  title: 'Test conflict edit'
   owner: 'tan.nguyen@holistics.io'
   block v2: VizBlock {
     label: 'Sum of Cost and Sum of Sales by Month'
@@ -221,26 +221,6 @@ Dashboard test_concurrent_edit_mhifc {
   ]
   view: TabLayout {
     label: 'View 1'
-    tab tab2: CanvasLayout {
-      label: 'Rename block 11221'
-      height: 800
-      grid_size: 20
-      block v4 {
-        position: pos(440, 20, 620, 420)
-        layer: 2
-      }
-      block v5 {
-        position: pos(20, 460, 620, 320)
-        layer: 3
-      }
-      block v6 {
-        position: pos(20, 120, 330, 220)
-        layer: 4
-      }
-      mobile {
-        mode: 'auto'
-      }
-    }
     tab tab1: CanvasLayout {
       label: 'Test by user 1 21212121'
       width: 1190
@@ -256,6 +236,26 @@ Dashboard test_concurrent_edit_mhifc {
         block v1
         block filter_block
         block v2
+      }
+    }
+    tab tab2: CanvasLayout {
+      label: 'rename by user 1'
+      height: 800
+      grid_size: 20
+      block v4 {
+        position: pos(260, 460, 620, 420)
+        layer: 2
+      }
+      block v5 {
+        position: pos(100, 520, 620, 320)
+        layer: 3
+      }
+      block v6 {
+        position: pos(160, 540, 340, 220)
+        layer: 4
+      }
+      mobile {
+        mode: 'auto'
       }
     }
   }
