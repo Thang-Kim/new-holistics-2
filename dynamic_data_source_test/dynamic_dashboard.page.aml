@@ -135,7 +135,7 @@ Dashboard dynamic_dashboard {
         layer: 1
       }
       block title {
-        position: pos(20, 20, 1160, 120)
+        position: pos(20, 20, 1380, 100)
       }
       block v_q0n6 {
         position: pos(640, 720, 760, 440)
