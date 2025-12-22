@@ -143,6 +143,16 @@ Dashboard dynamic_dashboard {
       }
       width: 1420
     }
+    tab tab_18zf: CanvasLayout {
+      label: 'tab new'
+      width: 1300
+      height: 800
+      grid_size: 20
+      auto_expand_vertically: true
+      mobile {
+        mode: 'auto'
+      }
+    }
     tab tab_mum7: CanvasLayout {
       label: 'Tab 2'
       width: 460
