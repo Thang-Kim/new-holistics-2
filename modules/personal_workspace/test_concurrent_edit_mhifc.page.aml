@@ -229,7 +229,7 @@ Dashboard test_concurrent_edit_mhifc {
         position: pos(270, 340, 620, 320)
       }
       block t_ozuv {
-        position: pos(120, 100, 200, 50)
+        position: pos(110, 180, 200, 50)
       }
       mobile {
         mode: 'manual'
@@ -260,6 +260,16 @@ Dashboard test_concurrent_edit_mhifc {
     }
     tab tab_acej: CanvasLayout {
       label: 'new tab'
+      width: 1300
+      height: 800
+      grid_size: 20
+      auto_expand_vertically: true
+      mobile {
+        mode: 'auto'
+      }
+    }
+    tab tab_wgs2: CanvasLayout {
+      label: 'Untitled'
       width: 1300
       height: 800
       grid_size: 20
