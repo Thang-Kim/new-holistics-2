@@ -3585,7 +3585,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
     padding: 0.08rem 0.5rem;
     border-radius: 4px;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
   }
 
   .insights-badge.red {
@@ -4052,20 +4052,20 @@ Products with <span class="insights-badge red">&ge;210</span> gap suggest potent
     }
     tab tab_ixd2: CanvasLayout {
       label: 'Thumbnail 3'
-      width: 1120
+      width: 1070
       height: 690
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
       block v_4qhv {
-        position: pos(10, 10, 1100, 90)
+        position: pos(10, 10, 1050, 90)
       }
       block t_gc9c {
-        position: pos(10, 110, 530, 570)
+        position: pos(10, 110, 480, 570)
       }
       block v_pk0i {
-        position: pos(550, 110, 560, 570)
+        position: pos(500, 110, 560, 570)
       }
     }
   }
