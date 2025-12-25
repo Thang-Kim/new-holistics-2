@@ -1,20 +1,11 @@
 Dashboard dashboard_2 {
   title: 'Dashboard'
   owner: 'son.hoang@holistics.io'
-  block filter_block: FilterBlock {
-    label: 'This is a Filter Block'
-    type: 'text'
-    default {
-      operator: 'is'
-      value: 'default'
-    }
-  }
   block v1: VizBlock {
     label: 'Name and Parent'
     viz: DataTable {
       dataset: ecommerce_dataset
       theme {
-
       }
       fields: [
         VizFieldFull {
@@ -87,7 +78,6 @@ Dashboard dashboard_2 {
     viz: DataTable {
       dataset: vinhhh_test_activities
       theme {
-
       }
       fields: [
         VizFieldFull {
@@ -116,14 +106,6 @@ Dashboard dashboard_2 {
           debug_comments: true
         }
       }
-    }
-  }
-  block f1: FilterBlock {
-    label: 'This is a Filter Block'
-    type: 'text'
-    default {
-      operator: 'is'
-      value: 'default'
     }
   }
   block v4: VizBlock {
@@ -201,7 +183,6 @@ Dashboard dashboard_2 {
     viz: DataTable {
       dataset: vinhhh_test_activities
       theme {
-
       }
       fields: [
         VizFieldFull {
@@ -316,9 +297,6 @@ Dashboard dashboard_2 {
         position: pos(10, 870, 330, 220)
         layer: 1
       }
-      block filter_block {
-        position: pos(20, 780, 400, 80)
-      }
       mobile {
         mode: 'manual'
         block v1
@@ -330,10 +308,6 @@ Dashboard dashboard_2 {
       label: 'Tab 2'
       height: 800
       grid_size: 20
-      block f1 {
-        position: pos(20, 20, 400, 80)
-        layer: 1
-      }
       block v4 {
         position: pos(440, 20, 620, 420)
         layer: 2
