@@ -5009,19 +5009,19 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
     tab tab_8eax: CanvasLayout {
       label: 'Thumbnail 2'
       width: 1190
-      height: 970
+      height: 980
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
       block v_fr0y {
-        position: pos(10, 510, 1170, 450)
+        position: pos(10, 520, 1170, 450)
       }
       block v_74bw {
-        position: pos(10, 0, 660, 500)
+        position: pos(10, 10, 660, 500)
       }
       block v_pyma {
-        position: pos(680, 0, 500, 500)
+        position: pos(680, 10, 500, 500)
       }
     }
     tab tab_ixd2: CanvasLayout {
