@@ -2459,7 +2459,7 @@ div.vue-markdown.text-widget-content.p-4:has(.custom_kpi_container) {
   color: #4C5159;
 }
 .custom_kpi_title {
-  font-size: 24px;
+  font-size: 20px;
 }
 .custom_kpi_value {
   font-size: 48px;
@@ -2486,7 +2486,7 @@ div.vue-markdown.text-widget-content.p-4:has(.custom_kpi_container) {
 <div class="custom_revenue_kpi">
   <span class="custom_compare_value"><strong>{{ rows.0.values.`Triangle Sign` }} {{ rows.0.values.`Delta Abs` }}</strong></span>
 </div> 
-</div>     ;;
+</div>      ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -2678,7 +2678,7 @@ div.vue-markdown.text-widget-content.p-4:has(.custom_kpi_container2) {
   color: #4C5159;
 }
 .custom_kpi_title {
-  font-size: 24px;
+  font-size: 20px;
 }
 .custom_kpi_value {
   font-size: 48px;
@@ -2705,7 +2705,7 @@ div.vue-markdown.text-widget-content.p-4:has(.custom_kpi_container2) {
 <div class="custom_revenue_kpi">
   <span class="custom_compare_value2"><strong>{{ rows.1.values.`Triangle Sign` }} {{ rows.1.values.`Delta Abs` }}</strong></span>
 </div> 
-</div>     ;;
+</div>      ;;
       settings {
         show_row_total: true
         show_column_total: true
