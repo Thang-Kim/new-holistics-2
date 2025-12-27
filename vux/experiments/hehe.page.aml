@@ -15,7 +15,7 @@ Dashboard untitled_2_2 {
       }
       grid_size: 20
       block v_ivyo {
-        position: pos(220, 20, 260, 180)
+        position: pos(20, 20, 260, 180)
       }
       block v_ibc4 {
         position: pos(-260, 20, 240, 80)
