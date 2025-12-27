@@ -1,0 +1,95 @@
+Dashboard untitled_2_2 {
+  title: 'Hehe boiz'
+  description: ''''''
+  view: TabLayout {
+    label: 'View 1'
+    tab tab1: CanvasLayout {
+      label: 'Tab 1'
+      width: 660
+      height: 300
+      mobile {
+        mode: 'manual'
+        block v1
+        block filter_block
+        block v2
+      }
+      grid_size: 20
+      block v_ivyo {
+        position: pos(220, 20, 260, 180)
+      }
+      block v_ibc4 {
+        position: pos(-260, 20, 240, 80)
+      }
+    }
+  }
+  theme: H.themes.classic
+  block v_ivyo: VizBlock {
+    label: 'Sum of Start Percent compared with Sum of End Percent'
+    viz: MetricKpi {
+      dataset: product_performance
+      value: VizFieldFull {
+        ref: r(product_performance, product_sales_performance_new_csv.start_percent)
+        aggregation: 'sum'
+        format {
+          type: 'number'
+          pattern: 'inherited'
+        }
+      }
+      compare_value: VizFieldFull {
+        ref: r(product_performance, product_sales_performance_new_csv.end_percent)
+        aggregation: 'sum'
+        format {
+          type: 'number'
+          pattern: 'inherited'
+        }
+      }
+      settings {
+        alignment: 'left'
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
+  block v_ibc4: VizBlock {
+    label: 'Border Color'
+    viz: MarkdownViz {
+      dataset: product_performance
+      calculation border_color {
+        label: 'Border Color'
+        formula: @aql case(
+  when: product_sales_performance_new_csv.start_percent < product_sales_performance_new_csv.end_percent
+  , then: 'red'
+  , else: 'green'
+);;
+        calc_type: 'dimension'
+        data_type: 'text'
+        model: product_sales_performance_new_csv
+      }
+      rows: [
+        VizFieldFull {
+          ref: ref('product_sales_performance_new_csv', 'border_color')
+          format {
+            type: 'text'
+          }
+        }
+      ]
+      content: @md <style>
+#block-v_ivyo {
+  border-color: {{ rows.0.`Border Color`.raw }} !important;
+}
+</style>
+
+<div>
+Custom CSS block
+</div> ;;
+      settings {
+        show_row_total: true
+        show_column_total: true
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
+}
