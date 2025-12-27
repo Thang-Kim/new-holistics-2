@@ -77,12 +77,13 @@ Dashboard untitled_2_2 {
       content: @md <style>
 #block-v_ivyo {
   border-color: {{ rows.0.`Border Color`.raw }} !important;
+  border-width: 2px !important;
 }
 </style>
 
 <div>
 Custom CSS block
-</div> ;;
+</div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
