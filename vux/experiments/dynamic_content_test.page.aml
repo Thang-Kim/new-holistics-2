@@ -2353,70 +2353,6 @@ padding-right: 0.50rem;
       }
     }
   }
-  block v_6dhg: VizBlock {
-    label: 'Revenue compared with Revenue (Prev. 1y)'
-    viz: MetricKpi {
-      dataset: ecommerce_official
-      filter {
-        field: r(orders.created_at)
-        operator: 'matches'
-        value: '2024'
-      }
-      value: VizFieldFull {
-        ref: r(ecommerce_official.revenue)
-        format {
-          type: 'number'
-          pattern: 'inherited'
-        }
-      }
-      compare_value: VizPopSettings {
-        field: r(orders.created_at)
-        value: RelativePopValue {
-          duration: 1
-          granularity: 'year'
-        }
-      }
-      settings {
-        display_mode: 'compare_by_number'
-        alignment: 'left'
-      }
-    }
-    settings {
-      hide_label: true
-    }
-  }
-  block v_gpeg: VizBlock {
-    label: 'Revenue compared with Revenue (Prev. 1y) copy'
-    viz: MetricKpi {
-      dataset: ecommerce_official
-      filter {
-        field: r(orders.created_at)
-        operator: 'matches'
-        value: '2024-01-01 - 2024-05-31'
-      }
-      value: VizFieldFull {
-        ref: r(ecommerce_official.revenue)
-        format {
-          type: 'number'
-          pattern: 'inherited'
-        }
-      }
-      compare_value: VizPopSettings {
-        field: r(orders.created_at)
-        value: AbsolutePopValue {
-          from: '2025-08-01'
-          to: '2025-12-31'
-        }
-      }
-      settings {
-        display_mode: 'compare_by_number'
-        alignment: 'left'
-      }
-    }
-    settings {
-      hide_label: true
-    }
-  }
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
@@ -2572,22 +2508,6 @@ padding-right: 0.50rem;
       }
       height: 1100
     }
-    tab tab_ukp4: CanvasLayout {
-      label: 'Untitled'
-      width: 1300
-      height: 800
-      grid_size: 20
-      auto_expand_vertically: true
-      mobile {
-        mode: 'auto'
-      }
-      block v_6dhg {
-        position: pos(20, 20, 380, 140)
-      }
-      block v_gpeg {
-        position: pos(20, 160, 380, 140)
-      }
-    }
   }
   interactions: [
     FilterInteraction {
@@ -2601,9 +2521,7 @@ padding-right: 0.50rem;
             'v_l0eq',
             'v_vq7e',
             'v_i51a',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2620,9 +2538,7 @@ padding-right: 0.50rem;
             'v_l0eq',
             'v_vq7e',
             'v_i51a',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2637,9 +2553,7 @@ padding-right: 0.50rem;
             'v_l0eq',
             'v_vq7e',
             'v_i51a',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2658,9 +2572,7 @@ padding-right: 0.50rem;
             'v_l0eq',
             'v_vq7e',
             'v_i51a',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2679,9 +2591,7 @@ padding-right: 0.50rem;
             'v_l0eq',
             'v_vq7e',
             'v_i51a',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2697,9 +2607,7 @@ padding-right: 0.50rem;
             'v_0k2v',
             'v_g7tl',
             'v_lhqm',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2715,9 +2623,7 @@ padding-right: 0.50rem;
             'v_0k2v',
             'v_g7tl',
             'v_lhqm',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2737,9 +2643,7 @@ padding-right: 0.50rem;
             'v_ggbb',
             'v_l0eq',
             'v_vq7e',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2756,9 +2660,7 @@ padding-right: 0.50rem;
             'v_0k2v',
             'v_g7tl',
             'v_lhqm',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2775,9 +2677,7 @@ padding-right: 0.50rem;
             'v_0k2v',
             'v_g7tl',
             'v_lhqm',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2794,9 +2694,7 @@ padding-right: 0.50rem;
             'v_0k2v',
             'v_g7tl',
             'v_lhqm',
-            'v_bzvx',
-            'v_6dhg',
-            'v_gpeg'
+            'v_bzvx'
           ]
           disabled: true
         }
@@ -2817,53 +2715,7 @@ padding-right: 0.50rem;
             'v_lhqm',
             'v_l0eq',
             'v_vq7e',
-            'v_i51a',
-            'v_6dhg',
-            'v_gpeg'
-          ]
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_6dhg'
-      to: [
-        CustomMapping {
-          block: [
-            'v_p5re',
-            'v_fyrn',
-            'v_93o6',
-            'v_0k2v',
-            'v_g7tl',
-            'v_mdra',
-            'v_ggbb',
-            'v_lhqm',
-            'v_l0eq',
-            'v_vq7e',
-            'v_i51a',
-            'v_bzvx'
-          ]
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_gpeg'
-      to: [
-        CustomMapping {
-          block: [
-            'v_p5re',
-            'v_fyrn',
-            'v_93o6',
-            'v_0k2v',
-            'v_g7tl',
-            'v_mdra',
-            'v_ggbb',
-            'v_lhqm',
-            'v_l0eq',
-            'v_vq7e',
-            'v_i51a',
-            'v_bzvx'
+            'v_i51a'
           ]
           disabled: true
         }
