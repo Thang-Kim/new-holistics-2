@@ -2898,6 +2898,16 @@ div.vue-markdown.text-widget-content.p-4:has(.custom_kpi_container2) {
         position: pos(360, 200, 360, 180)
       }
     }
+    tab tab_5g6p: CanvasLayout {
+      label: 'CSS Block'
+      width: 1300
+      height: 800
+      grid_size: 20
+      auto_expand_vertically: true
+      mobile {
+        mode: 'auto'
+      }
+    }
   }
   interactions: [
     FilterInteraction {
