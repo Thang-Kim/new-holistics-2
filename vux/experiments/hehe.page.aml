@@ -5,7 +5,7 @@ Dashboard hehe {
     label: 'View 1'
     tab tab1: CanvasLayout {
       label: 'Tab 1'
-      width: 330
+      width: 360
       height: 190
       mobile {
         mode: 'manual'
@@ -14,10 +14,10 @@ Dashboard hehe {
         block v2
       }
       block v_2mcy {
-        position: pos(10, 10, 310, 170)
+        position: pos(10, 10, 340, 170)
       }
       block v_kxhz {
-        position: pos(-220, 10, 180, 70)
+        position: pos(-190, 10, 180, 70)
       }
     }
   }
