@@ -64,8 +64,7 @@ Dashboard hehe {
   when: revenue < revenue | relative_period(orders.created_at, interval(-1 month))
   , then: 'red'
   , else: 'green'
-)
-;;
+);;
         calc_type: 'dimension'
         data_type: 'text'
         model: orders
@@ -114,7 +113,7 @@ Dashboard hehe {
 
 <div>
 Custom CSS block
-</div> ;;
+</div>  ;;
       settings {
         show_row_total: true
         show_column_total: true
