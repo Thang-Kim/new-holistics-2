@@ -18,7 +18,7 @@ Dashboard untitled_2_2 {
         position: pos(20, 20, 260, 180)
       }
       block v_ibc4 {
-        position: pos(-260, 20, 240, 80)
+        position: pos(0, 320, 240, 80)
       }
     }
   }
@@ -83,7 +83,7 @@ Dashboard untitled_2_2 {
 
 <div>
 Custom CSS block
-</div>  ;;
+</div>   ;;
       settings {
         show_row_total: true
         show_column_total: true
