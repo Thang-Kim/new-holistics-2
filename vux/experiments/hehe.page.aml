@@ -23,26 +23,30 @@ Dashboard hehe {
   }
   theme: H.themes.classic
   block v_2mcy: VizBlock {
-    label: 'Sum of Start Percent compared with Sum of End Percent'
+    label: 'Revenue compared with Revenue (Prev. 1m)'
     viz: MetricKpi {
-      dataset: product_performance
+      dataset: ecommerce_official
+      filter {
+        field: r(orders.created_at)
+        operator: 'matches'
+        value: 'last month'
+      }
       value: VizFieldFull {
-        ref: r(product_performance, product_sales_performance_new_csv.start_percent)
-        aggregation: 'sum'
+        ref: r(ecommerce_official.revenue)
         format {
           type: 'number'
           pattern: 'inherited'
         }
       }
-      compare_value: VizFieldFull {
-        ref: r(product_performance, product_sales_performance_new_csv.end_percent)
-        aggregation: 'sum'
-        format {
-          type: 'number'
-          pattern: 'inherited'
+      compare_value: VizPopSettings {
+        field: r(orders.created_at)
+        value: RelativePopValue {
+          duration: 1
+          granularity: 'month'
         }
       }
       settings {
+        display_mode: 'compare_by_number'
         alignment: 'left'
       }
     }
@@ -53,23 +57,51 @@ Dashboard hehe {
   block v_kxhz: VizBlock {
     label: 'Custom CSS Block'
     viz: MarkdownViz {
-      dataset: product_performance
+      dataset: ecommerce_official
       calculation border_color {
         label: 'Border Color'
         formula: @aql case(
-  when: product_sales_performance_new_csv.start_percent < product_sales_performance_new_csv.end_percent
+  when: revenue < revenue | relative_period(orders.created_at, interval(-1 month))
   , then: 'red'
   , else: 'green'
-);;
+)
+;;
         calc_type: 'dimension'
         data_type: 'text'
-        model: product_sales_performance_new_csv
+        model: orders
+      }
+      calculation delta {
+        label: 'Delta'
+        formula: @aql revenue - (revenue | relative_period(orders.created_at, interval(-1 month)));;
+        calc_type: 'measure'
+        data_type: 'number'
+      }
+      filter {
+        field: r(orders.created_at)
+        operator: 'matches'
+        value: 'last month'
       }
       rows: [
         VizFieldFull {
-          ref: ref('product_sales_performance_new_csv', 'border_color')
+          ref: ref('orders', 'border_color')
           format {
             type: 'text'
+          }
+        }
+      ]
+      values: [
+        VizFieldFull {
+          ref: r(ecommerce_official.revenue)
+          format {
+            type: 'number'
+            pattern: 'inherited'
+          }
+        },
+        VizFieldFull {
+          ref: 'delta'
+          format {
+            type: 'number'
+            pattern: 'inherited'
           }
         }
       ]
