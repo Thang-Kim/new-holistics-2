@@ -1311,16 +1311,6 @@ padding-right: 0.50rem;
         operator: 'is'
         value: true
       }
-      filter {
-        field: r(countries.name)
-        operator: 'is'
-        value: [
-          'Germany',
-          'Singapore',
-          'United States',
-          'Vietnam'
-        ]
-      }
       rows: [
         VizFieldFull {
           label: 'Country'
@@ -1450,7 +1440,7 @@ padding-right: 0.50rem;
       <span class="detail-value">{{ rows[0].`City` }}</span>
     </div>
   </div>
-</div>     ;;
+</div>    ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -1556,7 +1546,7 @@ padding-right: 0.50rem;
   }
 
   .h-drill-selected {
-    color: #2563EB;
+    color: green;
   }
 
   .country-card:has(.h-drill-selected) {
@@ -1609,7 +1599,7 @@ padding-right: 0.50rem;
     <span class="country-label">{{ `Country` }}</span>
   </div>
 {% end %}
-</div>    ;;
+</div>   ;;
       settings {
         show_row_total: true
         show_column_total: true
@@ -3259,6 +3249,160 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
   </ul>
 </div>;;
   }
+  block t_in3l: TextBlock {
+    content: @md <style>
+  .insights-badge {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1E40AF;
+    padding: 0.08rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .insights-badge.red {
+    background: #FEF2F2;
+    color: #DC2626;
+  }
+
+  .insights-badge.green {
+    background: #F0FDF4;
+    color: #16A34A;
+  }
+
+  .insights-container {
+    padding: 0.5rem;
+
+    max-width: 2000px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #374151;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .insights-container ul {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    list-style: none;
+  }
+
+  .insights-container li {
+    margin-bottom: 0.5rem;
+  }
+
+  .insights-container li:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="insights-container">
+  <!-- <p><strong>Key Insights:</strong></p> -->
+  <ul>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>Top Performers:</strong>
+    <span>Dumbbells</span> (<span class="insights-badge">500</span>),
+    <span>Fitness Tracker</span> (<span class="insights-badge">450</span>),
+    and <span>Jump Rope</span> (<span class="insights-badge">420</span>) lead in actual sales conversions.
+  </p></li>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>Largest Cart Abandonment:</strong>
+    <span>Exercise Bike</span> shows the biggest gap with <span class="insights-badge red">320</span> abandoned 
+    (<span style="color: #DC2626; font-weight: 600;">500</span> added vs. <span style="color: #0891F2; font-weight: 600;">180</span> purchased),
+    followed by <span>Resistance Bands</span> (<span class="insights-badge red">240</span>) 
+    and <span>Yoga Mat</span> (<span class="insights-badge red">210</span>).
+  </p></li>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>High Conversion Rate:</strong>
+    <span>Dumbbells</span> (<span class="insights-badge green">20</span> unit gap),
+    <span>Fitness Tracker</span> (<span class="insights-badge green">50</span>),
+    and <span>Jump Rope</span> (<span class="insights-badge green">60</span>) demonstrate the strongest purchase intent.
+  </p></li>
+  <li><p style="margin-bottom: 0; line-height: 1.8;">
+    <strong>Opportunity Area:</strong> Products with <span class="insights-badge red">&ge;210</span> gap suggest potential for targeted remarketing campaigns or checkout optimization.
+  </p></li>
+  </ul>
+</div>;;
+  }
+  block t_5z1f: TextBlock {
+    content: @md <style>
+  .insights-badge {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1E40AF;
+    padding: 0.08rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .insights-badge.red {
+    background: #FEF2F2;
+    color: #DC2626;
+  }
+
+  .insights-badge.green {
+    background: #F0FDF4;
+    color: #16A34A;
+  }
+
+  .insights-container {
+    padding: 0.5rem;
+
+    max-width: 2000px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #374151;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .insights-container ul {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    list-style: none;
+  }
+
+  .insights-container li {
+    margin-bottom: 0.5rem;
+  }
+
+  .insights-container li:last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="insights-container">
+  <!-- <p><strong>Key Insights:</strong></p> -->
+  <ul>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>Top Performers:</strong>
+    <span>Dumbbells</span> (<span class="insights-badge">500</span>),
+    <span>Fitness Tracker</span> (<span class="insights-badge">450</span>),
+    and <span>Jump Rope</span> (<span class="insights-badge">420</span>) lead in actual sales conversions.
+  </p></li>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>Largest Cart Abandonment:</strong>
+    <span>Exercise Bike</span> shows the biggest gap with <span class="insights-badge red">320</span> abandoned 
+    (<span style="color: #DC2626; font-weight: 600;">500</span> added vs. <span style="color: #0891F2; font-weight: 600;">180</span> purchased),
+    followed by <span>Resistance Bands</span> (<span class="insights-badge red">240</span>) 
+    and <span>Yoga Mat</span> (<span class="insights-badge red">210</span>).
+  </p></li>
+  <li><p style="margin-bottom: 1rem; line-height: 1.8;">
+    <strong>High Conversion Rate:</strong>
+    <span>Dumbbells</span> (<span class="insights-badge green">20</span> unit gap),
+    <span>Fitness Tracker</span> (<span class="insights-badge green">50</span>),
+    and <span>Jump Rope</span> (<span class="insights-badge green">60</span>) demonstrate the strongest purchase intent.
+  </p></li>
+  <li><p style="margin-bottom: 0; line-height: 1.8;">
+    <strong>Opportunity Area:</strong> Products with <span class="insights-badge red">&ge;210</span> gap suggest potential for targeted remarketing campaigns or checkout optimization.
+  </p></li>
+  </ul>
+</div>;;
+  }
   block v_4qhv: VizBlock {
     label: 'Country and Country Icon copy copy copy copy'
     viz: MarkdownViz {
@@ -3744,1156 +3888,6 @@ Products with <span class="insights-badge red">&ge;210</span> gap suggest potent
       }
     }
   }
-  block t_w99k: TextBlock {
-    content: @md <style>
-  .insights-badge {
-    display: inline-block;
-    background: #EFF6FF;
-    color: #1E40AF;
-    padding: 0.08rem 0.4rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.85rem;
-  }
-
- .oppor-items {
-   font-weight: bold;
- }
-
-  .insights-badge.red {
-    background: #FEF2F2;
-    color: #DC2626;
-  }
-
-  .insights-badge.green {
-    background: #F0FDF4;
-    color: #16A34A;
-  }
-
-  .insights-container {
-    padding: 0.5rem;
-
-    max-width: 2000px;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: #374151;
-    background: #FFFFFF;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-  }
-
-  .insights-container ul {
-    margin-top: 1rem;
-    padding-left: 1rem;
-    list-style: none;
-  }
-
-  .insights-container li {
-    margin-bottom: 1rem;
-  }
-
-  .insights-container li:last-child {
-    margin-bottom: 0;
-  }
-</style>
-
-<div class="insights-container">
-  <p><strong>Key Insights</strong></p>
-  <p>Country:<span style="font-size: 1rem"> 🇺🇸 </span>United States<p>
-  <ul>
-  <li><p>
-    <strong>Top Performers:</strong><br>
-    <span>Dumbbells</span> (<span class="insights-badge">500</span>) leads in actual sales conversions.
-  </p></li>
-
-  <li><p>
-    <strong>Opportunity Area:</strong><br>
-Potential products for targeted remarketing campaigns or checkout optimization: <span class="oppor-items">Exercise Bike</span> (<span class="insights-badge red">320</span> abandoned),
-<span class="oppor-items">Resistance Bands</span> (<span class="insights-badge red">240</span>)
-and <span class="oppor-items">Yoga Mat</span> (<span class="insights-badge red">210</span>).
-  </p></li>
-  </ul>
-</div>;;
-  }
-  block v_fr0y: VizBlock {
-    label: 'Product Overview'
-    viz: MarkdownViz {
-      dataset: ecommerce_official
-      calculation revenue_1 {
-        label: 'Revenue'
-        formula: @aql sum(order_items, order_items.quantity * products.price);;
-        calc_type: 'measure'
-        data_type: 'number'
-      }
-      filter {
-        field: r(categories.name)
-        operator: 'is_not'
-        value: [
-          'Baking and Cooking',
-          'Kitchen and Dininng',
-          'Home Entertainment'
-        ]
-      }
-      rows: [
-        VizFieldFull {
-          ref: r(products.name)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(products.product_image_url)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          label: 'Category Name'
-          ref: r(categories.name)
-          format {
-            type: 'text'
-          }
-        }
-      ]
-      values: [
-        VizFieldFull {
-          label: 'Total Price'
-          ref: r(products.price)
-          aggregation: 'sum'
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(ecommerce_official.revenue)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        }
-      ]
-      content: @md <style>
-  /* https://play.tailwindcss.com/vHqt0FBGy8 */
-	.deals-container {
-		display: grid;
-		padding: 0rem; 
-		grid-template-columns: repeat(1, minmax(0, 1fr)); 
-		column-gap: 0.7rem; 
-		row-gap: 0.7rem; 
-		list-style: none;
-		grid-template-columns: repeat(1, minmax(0, 1fr)); 
-    @media (min-width: 1024px) { 
-			grid-template-columns: repeat(3, minmax(0, 1fr)); 
-		}
-		@media (min-width: 1280px) { 
-			grid-template-columns: repeat(4, minmax(0, 1fr)); 
-			column-gap: 0.7rem; 
-		}
-		@media (min-width: 1536px) { 
-			grid-template-columns: repeat(4, minmax(0, 1fr)); 
-			column-gap: 0.7rem; 
-		}
-		@media (min-width: 1960px) { 
-			grid-template-columns: repeat(4, minmax(0, 1fr)); 
-			column-gap: 0.7rem; 
-		}
-		
-	}
-
-  ul.deals-container {
-    padding: 0px;
-  }
-
-	.deal-container {
-		overflow: hidden; 
-		border-radius: 0.75rem; 
-		border: 1px solid #E5E7EB;
-		list-style: none;
-	}
-
-	.deal-header {
-		display: flex; 
-		padding: 0.3rem 1rem; 
-		column-gap: 1rem; 
-		align-items: center; 
-		border-bottom: 1px solid rgb(17 24 39 / 0.05); 
-		background-color: #F9FAFB; 
-	}
-
-	.deal-logo {
-		object-fit: cover; 
-		flex: none; 
-		border-radius: 0.5rem;
-    border: 1px solid rgb(229 231 235);
-		box-shadow: 0 0 0 0 calc(1px) rgb(229 231 235); 
-		width: 3rem; 
-		height: 3rem; 
-		background-color: #ffffff; 
-    margin-top: 0.7rem;
-	}
-
-	.deal-name {
-		font-size: 0.9rem;
-		line-height: 1.25rem; 
-		font-weight: 500; 
-		line-height: 1rem; 
-		color: #111827; 
-    white-space: nowrap;      /* Prevents text from wrapping */
-    overflow: hidden;         /* Hides overflowing text */
-    text-overflow: ellipsis;  /* Displays ellipsis (...) */
-    width: 200px;             /* Or max-width, or similar constraint */
-    display: block;           /* CRITICAL: Ensures block-level behavior */
-	}
-
-  /*
-  .deal-name {
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden;    /* Hides overflowing text */
-    text-overflow: ellipsis; /* Displays ellipsis (...) */
-    width: 200px;        /* Or max-width, or similar constraint */
-	}
-  */
-
-	.deal-details {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem; 
-      padding-left: 0.5rem;
-      padding-right:0.5rem; 
-      margin-top: -0.75rem;
-      margin-bottom: -0.75rem; 
-      border-top-width: 1px; 
-      border-color: #F3F4F6; 
-      font-size: 0.85rem;
-      line-height: 1.25rem; 
-      line-height: 1.5rem; 
-	}
-
-	.deal-details-inner {
-      display: flex; 
-      padding-top: 0.3rem;
-      padding-bottom: 0.3rem; 
-      column-gap: 1rem; 
-      justify-content: space-between; 
-      text-alignment: right;
-	}
-
-
-
-/* Tailwind Helpers */
-.-my-3 {
-  margin-top: -0.75rem;
-  margin-bottom: -0.75rem;
-}
-.flex {
-  display: flex;
-}
-.flex-row {
-  flex-direction: row;
-}
-.flex-col {
-  flex-direction: column;
-}
-.grid {
-  display: grid;
-}
-.h-12 {
-  height: 3rem;
-}
-.w-12 {
-  width: 3rem;
-}
-.flex-none {
-  flex: none;
-}
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-.items-start {
-  align-items: flex-start;
-}
-.items-center {
-  align-items: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-.gap-x-2 {
-  column-gap: 0.2rem;
-}
-.gap-x-4 {
-  column-gap: 1rem;
-}
-.gap-x-6 {
-  column-gap: 1.5rem;
-}
-.gap-y-8 {
-  row-gap: 2rem;
-}
-.divide-y > :not([hidden]) ~ :not([hidden]) {
-  border:0;
-  border-style: solid;
-  border-top-width: 1px;
-  border-bottom-width: 1px;
-}
-.divide-y > div.deal-details-inner:last-of-type {
-  border-bottom-width: 0px;
-}
-.divide-gray-100 > :not([hidden]) ~ :not([hidden]) {
-  border-color: rgb(243 244 246);
-}
-.overflow-hidden {
-  overflow: hidden;
-}
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-.rounded-md {
-  border-radius: 0.375rem;
-}
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-.border {
-  border-width: 1px;
-}
-.border-b {
-  border-bottom-width: 1px;
-}
-.border-gray-200 {
-  border-color: rgb(229 231 235);
-}
-.border-gray-900\\/5 {
-  border-color: rgb(17 24 39 / 0.05);
-}
-.bg-gray-50 {
-  background-color: rgb(249 250 251);
-}
-.bg-red-50 {
-  background-color: rgb(254 242 242);
-}
-.bg-white {
-  background-color: rgb(255 255 255);
-}
-.object-cover {
-  object-fit: cover;
-}
-.p-6 {
-  padding: 1.5rem;
-}
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem; 
-}
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-.px-6 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.text-sm {
-  font-size: 0.85rem;
-  line-height: 1.25rem;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-.font-medium {
-  font-weight: 500;
-}
-.leading-6 {
-  line-height: 1.5rem;
-}
-.text-gray-500 {
-  color: rgb(107 114 128);
-}
-.text-gray-700 {
-  color: rgb(55 65 81);
-}
-.text-gray-900 {
-  color: rgb(17 24 39);
-}
-.text-red-700 {
-  color: rgb(185 28 28);
-}
-.pl-1 {
-  padding-left: 0.25rem;
-}
-.pr-1 {
-  padding-right: 0.25rem; 
-}
-
-.pl-2 {
-  padding-left: 0.50rem;
-}
-.pr-2 {
-  padding-right: 0.50rem; 
-}
-.text-sky-700 {
-  color: rgb(3 105 161);
-}
-.ring-sky-600\\/10 {
-border: 1px solid rgb(2 132 199 / 0.1);
-}
-.bg-sky-50 {
-background-color: rgb(240 249 255);
-}
-.ml-2 {
-  margin-left: 0.5rem;
-}
-.bg-green-50 {
-background-color: rgb(240 253 244);
-}
-.text-green-700 {
-color: rgb(21 128 61);
-}
-.ring-green-600\\/10 {
-border: 1px solid rgb(22 163 74 / 0.1)\;\;
-}
-
-/* Active State */
-
-.h-drill-selected {
-  color: #1B7CE4;
-}
-
-.deal-container:has(.h-drill-selected) {
-  border-color: #2563EB;
-  background: #EFF6FF;
-  transform: translateY(0);
-}
-
-.deal-name:has(.h-drill-selected) {
-  border-color: #2563EB;
-  background: #EFF6FF;
-  transform: translateY(0);
-}
-
-</style>
-
-<ul class="deals-container">
-  
-{% map(rows) %}
-
-<li class="deal-container">
-<div class="deal-header">
-<img src="{{ `Product Image Url`.raw }}" class="deal-logo" alt="{{ `Name`.raw }}">
-<section class="deal-name flex flex-col" style="justify-content: start;">
-<div class="flex flex-row" style="align-items: center;">{{ `Name` }}
-</div>
-</div>
-</section>
-</div>
-
-<dl class="-my-3 divide-y divide-gray-100 px-6 py-4 text-sm leading-6">
-
-<div class="deal-details-inner" style="border-bottom: none;">
-<dt class="text-gray-500">Revenue</dt>
-<dd class="flex items-start gap-x-2">
-<section class="rounded-md ml-2 font-medium ring-1 ring-inset text-green-700 bg-green-50 ring-green-600/10" style="padding: 2px 6px">{{ values.`Revenue` }}</section>
-</dd>
-</div>
-
-<div class="deal-details-inner">
-<dt class="text-gray-500">Category</dt>
-<dd class="flex items-start gap-x-2">
-<div class="font-medium text-gray-900">{{ `Category Name` }}</div>
-</dd>
-</div>
-
-<div class="deal-details-inner">
-<dt class="text-gray-500">Price</dt>
-<dd class="flex items-start gap-x-2">
-<div class="font-medium text-gray-900">{{ values.`Total Price` }}</div>
-</dd>
-</div>
-
-</dd>
-</div>
-</dl>
-</li>
-
-{% end %}
-
-</ul>        ;;
-      settings {
-        show_row_total: true
-        show_column_total: true
-      }
-    }
-  }
-  block v_74bw: VizBlock {
-    label: 'Dumbbell Chart: Add-to-Carts vs. Purchases'
-    viz: MarkdownViz {
-      dataset: product_performance
-      filter {
-        field: r(product_sales_performance_new_csv.product_name)
-        operator: 'is_not'
-        value: [
-          'Yoga Mat',
-          'Wireless Headphones',
-          'Water Bottle'
-        ]
-      }
-      rows: [
-        VizFieldFull {
-          ref: r(product_sales_performance_new_csv.product_name)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_sales_performance_new_csv.added_to_cart)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_sales_performance_new_csv.purchased)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_sales_performance_new_csv.cart_abandonment)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_sales_performance_new_csv.conversion_rate)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_performance, product_sales_performance_new_csv.start_percent)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_performance, product_sales_performance_new_csv.end_percent)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(product_performance, product_sales_performance_new_csv.bar_width)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        }
-      ]
-      content: @md <style>
-  .dumbbell-container {
-    padding: .5rem 1.5rem;
-    max-width: 600px;
-  }
-
-  .dumbbell-row {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0rem;
-    align-items: center;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #F3F4F6;
-    width: 95%;
-  }
-
-  .dumbbell-row:last-child {
-    border-bottom: none;
-  }
-
-  .dumbbell-label {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #374151;
-  }
-
-  .dumbbell-plot-area {
-    position: relative;
-    height: 10px;
-    display: flex;
-    align-items: center;
-  }
-
-  .dumbbell-bar-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .dumbbell-line {
-    position: absolute;
-    height: 8px;
-    background: linear-gradient(to right, #0891F2, #F1434B);
-    border-radius: 4px;
-    opacity: 0.6;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .dumbbell-dot {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-  }
-
-  .dumbbell-dot.start {
-    background-color: #0891F2;
-  }
-
-  .dumbbell-dot.end {
-    background-color: #F1434B;
-  }
-
-  .dumbbell-value {
-    position: absolute;
-    font-size: 0.75rem;
-    font-weight: 600;
-    white-space: nowrap;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .dumbbell-value.start {
-    color: #0891F2;
-    transform: translate(calc(-100% - 12px), -50%);
-  }
-
-  .dumbbell-value.end {
-    color: #F1434B;
-    transform: translate(12px, -50%);
-  }
-
-  .dumbbell-title {
-    padding: 0 0 1rem 0;
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111827;
-  }
-
-  .dumbbell-legend {
-    display: flex;
-    gap: 2rem;
-    padding: 0.5rem 0.5rem 0.5rem 0;
-    font-size: 0.75rem;
-    color: #6B7280;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .legend-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .legend-dot.start {
-    background-color: #0891F2;
-  }
-
-  .legend-dot.end {
-    background-color: #F1434B;
-  }
-
-  @media (max-width: 768px) {
-    .dumbbell-row {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
-
-    .dumbbell-label {
-      font-weight: 600;
-      padding-bottom: 0.5rem;
-    }
-
-    .dumbbell-plot-area {
-      height: 60px;
-    }
-  }
-</style>
-
-<!-- <div class="dumbbell-title">Product Performance: Purchases vs. Cart Additions</div> -->
-
-<div class="dumbbell-legend">
-  <div class="legend-item">
-    <span class="legend-dot start"></span>
-    <span>Purchased</span>
-  </div>
-  <div class="legend-item">
-    <span class="legend-dot end"></span>
-    <span>Added to Cart</span>
-  </div>
-</div>
-
-<div class="dumbbell-container">
-{% map(rows) %}
-  <div class="dumbbell-row">
-    <div class="dumbbell-label">{{ `Product name` }}</div>
-    <div class="dumbbell-plot-area">
-      <div class="dumbbell-bar-container">
-        <div class="dumbbell-line" style="left: {{ `Start Percent`.raw }}%; width: {{ `Bar Width`.raw }}%;"></div>
-        <div class="dumbbell-dot start" style="left: {{ `Start Percent`.raw }}%;"></div>
-        <div class="dumbbell-value start" style="left: {{ `Start Percent`.raw }}%;">{{ `Purchased` }}</div>
-        <div class="dumbbell-dot end" style="left: {{ `End Percent`.raw }}%;"></div>
-        <div class="dumbbell-value end" style="left: {{ `End Percent`.raw }}%;">{{ `Added to cart` }}</div>
-      </div>
-    </div>
-  </div>
-{% end %}
-</div>          ;;
-      settings {
-        show_row_total: true
-        show_column_total: true
-      }
-    }
-  }
-  block v_pyma: VizBlock {
-    label: 'Top Customer'
-    viz: MarkdownViz {
-      dataset: ecommerce_official
-      filter {
-        field: r(user_lookup_csv.record_sample)
-        operator: 'is'
-        value: true
-      }
-      rows: [
-        VizFieldFull {
-          ref: r(user_lookup_csv.user_id)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          ref: r(users.email)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(users.full_name)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(user_lookup_csv.profile_image_url)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          label: 'Location'
-          ref: r(cities.name)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          ref: r(user_lookup_csv.status)
-          format {
-            type: 'text'
-          }
-        },
-        VizFieldFull {
-          label: 'Member Since'
-          ref: r(user_lookup_csv.member_since)
-          transformation: 'datetrunc month'
-          format {
-            type: 'date'
-            pattern: 'LLL yyyy'
-          }
-        },
-        VizFieldFull {
-          label: 'Last Order Date'
-          ref: r(user_lookup_csv.last_order_date)
-          transformation: 'datetrunc month'
-          format {
-            type: 'date'
-            pattern: 'LLL yyyy'
-          }
-        }
-      ]
-      values: [
-        VizFieldFull {
-          label: 'Total Orders'
-          ref: r(user_lookup_csv.total_orders)
-          aggregation: 'sum'
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          label: 'Lifetime Value'
-          ref: r(user_lookup_csv.lifetime_value)
-          aggregation: 'sum'
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        },
-        VizFieldFull {
-          label: 'Avg Order Value'
-          ref: r(user_lookup_csv.avg_order_value)
-          aggregation: 'sum'
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-        }
-      ]
-      content: @md <style>
-  /* Record Lookup Card Styling */
-  .record-card {
-    max-width: 600px;
-    background-color: white;
-    border-radius: 12px;
-    border: 1px solid #E5E7EB;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  }
-
-  .record-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #F9FAFB;
-    border-bottom: 1px solid #E5E7EB;
-  }
-
-  .record-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .record-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.375rem;
-  }
-
-  .record-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #111827;
-    line-height: 1.3;
-  }
-
-  .record-email {
-    font-size: 0.875rem;
-    color: #6366F1;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-  }
-
-  .record-email:hover {
-    text-decoration: underline;
-  }
-
-  .record-location {
-    font-size: 0.875rem;
-    color: #6B7280;
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-  }
-
-
-  .record-location a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .record-location a:hover {
-    color: #4B5563;
-    text-decoration: underline;
-  }
-
-  .user-id {
-    font-size: 0.875rem;
-    color: #6B7280;
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-  }
-
-  .user-id a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  /* Metrics Section */
-  .record-metrics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-bottom: 1px solid #E5E7EB;
-  }
-
-  .metric-item {
-    padding: 1.25rem;
-    text-align: center;
-    border-right: 1px solid #E5E7EB;
-  }
-
-  .metric-item:last-child {
-    border-right: none;
-  }
-
-  .metric-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111827;
-    line-height: 1.2;
-  }
-
-  .metric-label {
-    font-size: 0.75rem;
-    color: #6B7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-top: 0.25rem;
-  }
-
-  /* Details Section */
-  .record-details {
-    padding: .5rem 1rem;
-  }
-
-  .detail-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #F3F4F6;
-  }
-
-  .detail-row:last-child {
-    border-bottom: none;
-  }
-
-  .detail-label {
-    font-size: 0.875rem;
-    color: #6B7280;
-    font-weight: 500;
-  }
-
-  .detail-value {
-    font-size: 0.875rem;
-    color: #111827;
-    font-weight: 600;
-    padding: 0rem 0.75rem;
-  }
-
-  /* Status Badge */
-  .status-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .status-badge.active,
-  .status-badge.ACTIVE,
-  .status-badge:is([class*="active"], [class*="ACTIVE"]) {
-    background-color: #DEF7EC !important;
-    color: #047857 !important;
-  }
-
-  .status-badge.vip,
-  .status-badge.VIP,
-  .status-badge:is([class*="vip"], [class*="VIP"]) {
-    background-color: #FEF3C7 !important;
-    color: #92400E !important;
-  }
-
-  .status-badge.new,
-  .status-badge.NEW,
-  .status-badge:is([class*="new"], [class*="NEW"]) {
-    background-color: #DBEAFE !important;
-    color: #1E3A8A !important;
-  }
-
-  /* Icon Styling */
-  .icon {
-    display: inline-block;
-    width: 16px;
-    height: 20px;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 640px) {
-    .record-header {
-      grid-template-columns: 1fr;
-      text-align: center;
-      gap: 1rem;
-    }
-
-    .record-image {
-      margin: 0 auto;
-    }
-
-    .record-email,
-    .record-location {
-      justify-content: center;
-    }
-
-    .record-metrics {
-      grid-template-columns: 1fr;
-    }
-
-    .metric-item {
-      border-right: none;
-      border-bottom: 1px solid #E5E7EB;
-    }
-
-    .metric-item:last-child {
-      border-bottom: none;
-    }
-  }
-
-  /* Empty State */
-  .empty-state {
-    padding: 3rem 1.5rem;
-    text-align: center;
-    color: #9CA3AF;
-  }
-
-  .empty-state-title {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-
-  .empty-state-text {
-    font-size: 0.875rem;
-  }
-</style>
-
-<div class="record-card">
-
-<!-- Header Section -->
-<div class="record-header">
-<img src="{{ rows.0.`Profile Image URL`.raw }}" alt="{{ rows.0.`Full Name`.formatted }}" class="record-image" />
-
-<div class="record-info">
-<div class="record-name">{{ rows.0.`Full Name` }}</div>
-
-<a href="mailto:{{ rows.0.`Email`.raw }}" class="record-email">
-  <span class="icon">✉️</span>
-  {{ rows.0.`Email` }}
-</a>
-
-<div class="record-location">
-  <span class="icon">📍</span>
-  <a href="https://www.google.com/maps/search/?api=1&query={{ rows.0.`Location`.raw }}" target="_blank" rel="noopener">
-    {{ rows.0.`Location` }}
-  </a>
-</div>
-
-<!--
-<div class="user-id">
-  <span class="icon">🆔</span> 
-  <a href="" target="_blank" rel="noopener">
-    {{ rows.0.`User ID`.raw }}
-  </a>
-</div>
--->
-
-</div>
-</div>
-
-<!-- Metrics Section -->
-<div class="record-metrics">
-  <div class="metric-item">
-    <div class="metric-value">{{ rows.0.values.`Total Orders` }}</div>
-    <div class="metric-label">Total Orders</div>
-  </div>
-
-  <div class="metric-item">
-    <div class="metric-value">{{ rows.0.values.`Lifetime Value` }}</div>
-    <div class="metric-label">Lifetime Value</div>
-  </div>
-
-  <div class="metric-item">
-    <div class="metric-value">{{ rows.0.values.`Avg Order Value` }}</div>
-    <div class="metric-label">Avg Order</div>
-  </div>
-</div>
-
-<!-- Details Section -->
-<div class="record-details">
-
-  <div class="detail-row">
-    <span class="detail-label">Status</span>
-    <span class="status-badge {{ rows.0.`Status`.raw  }}">{{ rows.0.`Status` }}</span>
-  </div>
-  
-  <div class="detail-row">
-    <span class="detail-label">Member Since</span>
-    <span class="detail-value">{{ rows.0.`Member Since` }}</span>
-  </div>
-
-  <div class="detail-row">
-    <span class="detail-label">Last Order</span>
-    <span class="detail-value">{{ rows.0.`Last Order Date` }}</span>
-  </div>
-</div>
-</div>      ;;
-      settings {
-        show_row_total: true
-        show_column_total: true
-      }
-    }
-  }
   view: TabLayout {
     label: 'View 1'
     tab tab2: CanvasLayout {
@@ -5043,26 +4037,24 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
     }
     tab tab_8eax: CanvasLayout {
       label: 'Thumbnail 2'
-      width: 1160
-      height: 910
+      width: 1300
+      height: 800
+      grid_size: 20
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
-      block v_fr0y {
-        position: pos(10, 450, 1140, 450)
+      block t_in3l {
+        position: pos(20, 20, 1200, 240)
       }
-      block v_74bw {
-        position: pos(10, 10, 630, 430)
-      }
-      block v_pyma {
-        position: pos(650, 10, 500, 430)
+      block t_5z1f {
+        position: pos(20, 280, 1200, 240)
       }
     }
     tab tab_ixd2: CanvasLayout {
       label: 'Thumbnail 3'
       width: 940
-      height: 1270
+      height: 680
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
@@ -5075,9 +4067,6 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
       }
       block v_pk0i {
         position: pos(430, 100, 490, 570)
-      }
-      block t_w99k {
-        position: pos(10, 680, 410, 570)
       }
     }
   }
@@ -5092,8 +4081,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_ufa3',
             'v_mcpc',
             'v_xr4t',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5108,8 +4096,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_ufa3',
             'v_mcpc',
             'v_xr4t',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5129,9 +4116,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5151,9 +4136,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5174,9 +4157,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5193,9 +4174,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5212,9 +4191,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5231,9 +4208,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5250,9 +4225,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5269,9 +4242,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_gm4b',
             'v_115j',
             'v_38hm',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5286,8 +4257,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_z3mq',
             'v_mcpc',
             'v_xr4t',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5302,8 +4272,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_z3mq',
             'v_mcpc',
             'v_xr4t',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5318,8 +4287,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_z3mq',
             'v_5q1s',
             'v_ufa3',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5338,9 +4306,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_n0ur',
             'v_i7fk',
             'v_11ig',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5355,8 +4321,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_z3mq',
             'v_5q1s',
             'v_ufa3',
-            'v_pk0i',
-            'v_74bw'
+            'v_pk0i'
           ]
           disabled: true
         }
@@ -5375,9 +4340,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_n0ur',
             'v_i7fk',
             'v_11ig',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5396,9 +4359,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_n0ur',
             'v_i7fk',
             'v_11ig',
-            'v_4qhv',
-            'v_fr0y',
-            'v_pyma'
+            'v_4qhv'
           ]
           disabled: true
         }
@@ -5419,9 +4380,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_11ig',
             'v_gm4b',
             'v_115j',
-            'v_38hm',
-            'v_fr0y',
-            'v_pyma'
+            'v_38hm'
           ]
           disabled: true
         }
@@ -5437,69 +4396,7 @@ border: 1px solid rgb(22 163 74 / 0.1)\;\;
             'v_5q1s',
             'v_ufa3',
             'v_mcpc',
-            'v_xr4t',
-            'v_74bw'
-          ]
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_fr0y'
-      to: [
-        CustomMapping {
-          block: [
-            'v_p5re',
-            'v_fyrn',
-            'v_93o5',
-            'v_ud30',
-            'v_f8bi',
-            'v_n0ur',
-            'v_i7fk',
-            'v_11ig',
-            'v_gm4b',
-            'v_115j',
-            'v_38hm',
-            'v_4qhv'
-          ]
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_74bw'
-      to: [
-        CustomMapping {
-          block: [
-            'v4',
-            'v_z3mq',
-            'v_5q1s',
-            'v_ufa3',
-            'v_mcpc',
-            'v_xr4t',
-            'v_pk0i'
-          ]
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_pyma'
-      to: [
-        CustomMapping {
-          block: [
-            'v_p5re',
-            'v_fyrn',
-            'v_93o5',
-            'v_ud30',
-            'v_f8bi',
-            'v_n0ur',
-            'v_i7fk',
-            'v_11ig',
-            'v_gm4b',
-            'v_115j',
-            'v_38hm',
-            'v_4qhv'
+            'v_xr4t'
           ]
           disabled: true
         }
