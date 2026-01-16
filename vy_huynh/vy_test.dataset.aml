@@ -1,5 +1,5 @@
 Dataset vy_test {
-  label: 'vy_test'
+  label: '[Demo] Ecommerce (Official)'
   description: ''
   data_source_name: 'khai_postgre'
   models: [
