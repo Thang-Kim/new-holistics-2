@@ -22,15 +22,15 @@ Dashboard hehe {
     }
     tab tab_3oe9: CanvasLayout {
       label: 'Product Image Url'
-      width: 970
-      height: 930
+      width: 820
+      height: 800
       grid_size: 20
       auto_expand_vertically: true
       mobile {
         mode: 'auto'
       }
       block v_utgf {
-        position: pos(-70, -230, 1020, 1140)
+        position: pos(20, 20, 780, 760)
       }
     }
   }
@@ -137,7 +137,7 @@ Custom CSS block
     }
   }
   block v_utgf: VizBlock {
-    label: 'Product Overview copy'
+    label: 'Img Url'
     viz: DataTable {
       dataset: ecommerce_official
       calculation revenue_1 {
@@ -148,10 +148,12 @@ Custom CSS block
       }
       fields: [
         VizFieldFull {
-          ref: r(products.name)
+          ref: r(products.id)
           format {
-            type: 'text'
+            type: 'number'
+            pattern: 'inherited'
           }
+          uname: 'products_id'
         },
         VizFieldFull {
           ref: r(products.product_image_url)
@@ -162,6 +164,18 @@ Custom CSS block
       ]
       settings {
         show_row_number: true
+        sorts: [
+          SortSetting {
+            key: 'products_id'
+            direction: 'asc'
+          }
+        ]
+        column_styles: [
+          ColumnStyle {
+            key: 'products_id'
+            width: 136
+          }
+        ]
       }
     }
   }
