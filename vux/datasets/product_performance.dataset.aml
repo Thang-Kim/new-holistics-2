@@ -1,6 +1,6 @@
 Dataset product_performance {
   label: 'product_performance'
-  description: 'For Dynamic Content Blocks experiments'
+  description: 'For Dynamic Content Blocks experiments 1'
   data_source_name: 'khai_postgre'
   models: [
     product_sales_performance_new_csv
