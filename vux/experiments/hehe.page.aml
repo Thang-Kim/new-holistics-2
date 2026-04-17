@@ -20,19 +20,6 @@ Dashboard hehe {
         position: pos(-190, 10, 180, 70)
       }
     }
-    tab tab_3oe9: CanvasLayout {
-      label: 'Product Image Url'
-      width: 820
-      height: 800
-      grid_size: 20
-      auto_expand_vertically: true
-      mobile {
-        mode: 'auto'
-      }
-      block v_utgf {
-        position: pos(20, 20, 780, 760)
-      }
-    }
   }
   theme: H.themes.classic
   block v_2mcy: VizBlock {
@@ -136,79 +123,4 @@ Custom CSS block
       hide_label: true
     }
   }
-  block v_utgf: VizBlock {
-    label: 'Img Url'
-    viz: DataTable {
-      dataset: ecommerce_official
-      calculation revenue_1 {
-        label: 'Revenue'
-        formula: @aql sum(order_items, order_items.quantity * products.price);;
-        calc_type: 'measure'
-        data_type: 'number'
-      }
-      fields: [
-        VizFieldFull {
-          ref: r(products.id)
-          format {
-            type: 'number'
-            pattern: 'inherited'
-          }
-          uname: 'products_id'
-        },
-        VizFieldFull {
-          ref: r(products.product_image_url)
-          format {
-            type: 'text'
-          }
-        }
-      ]
-      settings {
-        show_row_number: true
-        sorts: [
-          SortSetting {
-            key: 'products_id'
-            direction: 'asc'
-          }
-        ]
-        column_styles: [
-          ColumnStyle {
-            key: 'products_id'
-            width: 136
-          }
-        ]
-      }
-    }
-  }
-  interactions: [
-    FilterInteraction {
-      from: 'v_2mcy'
-      to: [
-        CustomMapping {
-          block: 'v_utgf'
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_kxhz'
-      to: [
-        CustomMapping {
-          block: 'v_utgf'
-          disabled: true
-        }
-      ]
-    },
-    FilterInteraction {
-      from: 'v_utgf'
-      to: [
-        CustomMapping {
-          block: [
-            'v_2mcy',
-            'v_kxhz'
-          ]
-          disabled: true
-        }
-      ]
-    }
-  ]
 }
