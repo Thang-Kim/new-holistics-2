@@ -1,0 +1,45 @@
+Model dbo_customer {
+  type: 'table'
+  label: 'Customer'
+  description: ''
+  data_source_name: 'SQLServer'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.Id }};;
+  }
+  dimension first_name {
+    label: 'First Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.FirstName }};;
+  }
+  dimension last_name {
+    label: 'Last Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.LastName }};;
+  }
+  dimension city {
+    label: 'City'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.City }};;
+  }
+  dimension country {
+    label: 'Country'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.Country }};;
+  }
+  dimension phone {
+    label: 'Phone'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.Phone }};;
+  }
+
+  owner: 'thang.lk@holistics.io'
+  table_name: '[dbo].[Customer]'
+}
